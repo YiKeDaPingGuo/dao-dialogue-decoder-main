@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cyber-Borges: Rice Paper & Ink */
+    --background: 60 10% 98%;
+    --foreground: 220 20% 12%;
+
+    --card: 80 15% 96%;
+    --card-foreground: 220 20% 12%;
+
+    --popover: 60 20% 97%;
+    --popover-foreground: 220 20% 12%;
+
+    /* Alhambra Red */
+    --primary: 3 62% 44%;
+    --primary-foreground: 40 30% 96%;
+
+    /* Bamboo Green tones */
+    --secondary: 150 20% 92%;
+    --secondary-foreground: 220 20% 12%;
+
+    --muted: 80 10% 93%;
+    --muted-foreground: 220 10% 46%;
+
+    /* Andalusian Gold */
+    --accent: 43 65% 52%;
+    --accent-foreground: 220 20% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 80 12% 88%;
+    --input: 80 12% 88%;
+    --ring: 3 62% 44%;
+
+    --radius: 0.625rem;
+
+    /* Extended palette */
+    --bamboo: 150 20% 92%;
+    --rice-paper: 60 10% 98%;
+    --ink: 220 20% 12%;
+    --alhambra: 3 62% 44%;
+    --gold: 43 65% 52%;
+    --jade: 160 30% 40%;
+    --silk: 40 30% 96%;
+
+    /* Glass */
+    --glass-bg: 60 20% 97% / 0.7;
+    --glass-border: 80 12% 88% / 0.5;
+
+    --sidebar-background: 80 15% 96%;
+    --sidebar-foreground: 220 20% 12%;
+    --sidebar-primary: 3 62% 44%;
+    --sidebar-primary-foreground: 40 30% 96%;
+    --sidebar-accent: 150 20% 92%;
+    --sidebar-accent-foreground: 220 20% 12%;
+    --sidebar-border: 80 12% 88%;
+    --sidebar-ring: 3 62% 44%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 60 10% 92%;
+    --card: 220 18% 12%;
+    --card-foreground: 60 10% 92%;
+    --popover: 220 18% 10%;
+    --popover-foreground: 60 10% 92%;
+    --primary: 3 62% 50%;
+    --primary-foreground: 40 30% 96%;
+    --secondary: 160 15% 18%;
+    --secondary-foreground: 60 10% 92%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 43 65% 52%;
+    --accent-foreground: 220 20% 8%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 3 62% 50%;
+    --bamboo: 160 15% 18%;
+    --rice-paper: 220 20% 8%;
+    --ink: 60 10% 92%;
+    --alhambra: 3 62% 50%;
+    --gold: 43 65% 52%;
+    --jade: 160 30% 50%;
+    --silk: 220 15% 15%;
+    --glass-bg: 220 18% 12% / 0.7;
+    --glass-border: 220 15% 20% / 0.5;
+    --sidebar-background: 220 18% 10%;
+    --sidebar-foreground: 60 10% 92%;
+    --sidebar-primary: 3 62% 50%;
+    --sidebar-primary-foreground: 40 30% 96%;
+    --sidebar-accent: 160 15% 18%;
+    --sidebar-accent-foreground: 60 10% 92%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 3 62% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .font-chinese {
+    font-family: 'Noto Serif SC', serif;
+  }
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  .glass-panel {
+    @apply backdrop-blur-xl border rounded-lg;
+    background: hsl(var(--glass-bg));
+    border-color: hsl(var(--glass-border));
+  }
+
+  .ink-spread {
+    animation: inkSpread 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 20px hsl(var(--gold) / 0.2), 0 0 40px hsl(var(--gold) / 0.1);
+  }
+
+  .rice-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C9C8C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .word-highlight {
+    @apply cursor-pointer transition-all duration-200 rounded px-0.5 -mx-0.5;
+  }
+  .word-highlight:hover {
+    background: hsl(var(--gold) / 0.2);
+  }
+  .word-highlight.active {
+    background: hsl(var(--gold) / 0.3);
+    box-shadow: 0 2px 8px hsl(var(--gold) / 0.15);
+  }
+
+  .persona-laozi {
+    --persona-hue: 160;
+    --persona-color: hsl(160 30% 40%);
+  }
+  .persona-translator {
+    --persona-hue: 3;
+    --persona-color: hsl(3 62% 44%);
+  }
+  .persona-student {
+    --persona-hue: 43;
+    --persona-color: hsl(43 65% 52%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes inkSpread {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes brushStroke {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
