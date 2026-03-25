@@ -16,7 +16,7 @@ const CognitionEngine = () => {
 
   const tabs = [
     { key: "graph" as const, label: "Grafo de Conocimiento", icon: "🕸️" },
-    { key: "chat" as const, label: "大道至简阁", icon: "🏛️" },
+    { key: "chat" as const, label: "", icon: "🏛️" },
     { key: "video" as const, label: "Vídeo Generativo", icon: "🎬" },
   ];
 

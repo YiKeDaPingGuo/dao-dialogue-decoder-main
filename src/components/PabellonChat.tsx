@@ -51,6 +51,29 @@ const tabs = [
   },
 ];
 
+const TAB_MOCK_REPLIES: Record<string, string[]> = {
+  negocio: [
+    "En negocios, la lectura taoísta sugiere: menos reacción impulsiva, más ritmo sostenible. Define una prioridad única por semana y elimina lo accesorio.",
+    "Si un proyecto está estancado, prueba *Wu Wei*: deja de empujar donde hay resistencia y rediseña el camino con menos fricción operativa.",
+  ],
+  equipo: [
+    "Para equipos: primero claridad de roles, luego confianza. Un líder taoísta no controla cada detalle, diseña condiciones para que el equipo fluya.",
+    "Cuando hay conflicto, evita imponer una verdad inmediata. Escucha dos versiones, identifica lo común y acuerda un experimento corto de mejora.",
+  ],
+  relaciones: [
+    "En relaciones íntimas, Tao propone presencia sin posesión. Habla desde necesidad real, no desde miedo al abandono.",
+    "Si hay ansiedad, practica una pausa: respirar, nombrar emoción y responder con amabilidad. Menos control, más conexión auténtica.",
+  ],
+  laboral: [
+    "En el trabajo, 和光同尘 puede entenderse como 'brillar sin fricción': competencia alta, ego bajo y comunicación limpia.",
+    "Para ascenso: aporta valor visible en problemas clave y evita guerras de protagonismo. Coherencia > ruido.",
+  ],
+  educacion: [
+    "En educación familiar: guía sin dominar. Estructura clara, expectativas simples y espacio para que el niño explore por sí mismo.",
+    "Cuando aparezca tensión en crianza, reduce órdenes y aumenta preguntas. Educar es acompañar el crecimiento, no imponer una forma única.",
+  ],
+};
+
 const PabellonChat = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [messages, setMessages] = useState<Msg[]>([
@@ -75,86 +98,27 @@ const PabellonChat = () => {
 
   const streamChat = async (allMessages: Msg[]) => {
     setIsLoading(true);
-    let assistantSoFar = "";
 
-    const upsert = (chunk: string) => {
-      assistantSoFar += chunk;
-      setMessages((prev) => {
-        const last = prev[prev.length - 1];
-        if (last?.role === "assistant" && assistantSoFar.startsWith(chunk.slice(0, 5) || chunk)) {
-          // Update last assistant
-          return prev.map((m, i) =>
-            i === prev.length - 1 ? { ...m, content: assistantSoFar } : m
-          );
-        }
-        if (last?.role === "assistant" && prev.length > 1 && prev[prev.length - 2]?.role === "user") {
-          return prev.map((m, i) =>
-            i === prev.length - 1 ? { ...m, content: assistantSoFar } : m
-          );
-        }
-        return [...prev, { role: "assistant", content: assistantSoFar }];
-      });
-    };
+    const tab = tabs[activeTab];
+    const candidates = TAB_MOCK_REPLIES[tab.key] || [
+      "Te propongo empezar con una respuesta breve y aplicable: identifica una sola acción de bajo esfuerzo y alto impacto para hoy.",
+    ];
+    const lastUser = allMessages.filter((m) => m.role === "user").at(-1)?.content ?? "";
+    const normalized = lastUser.toLowerCase();
+    const selected =
+      normalized.includes("wu wei") || normalized.includes("无为")
+        ? "Wu Wei (无为) en este contexto significa intervenir con precisión y no desde ansiedad. Elige una acción pequeña que alivie la fricción principal."
+        : candidates[Math.floor(Math.random() * candidates.length)];
 
-    try {
-      const tab = tabs[activeTab];
-      const systemMessages = [
-        {
-          role: "system" as const,
-          content: `Eres un sabio consejero de la plataforma "¿Qué TAO?" — Pabellón de la Gran Simplicidad (大道至简阁). ${tab.systemExtra} Responde en español con términos clave en chino. Sé empático, conciso y profundo. Usa citas del Tao Te Ching cuando sea apropiado.`,
-        },
-      ];
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        content: selected,
+      },
+    ]);
 
-      const resp = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-          },
-          body: JSON.stringify({
-            messages: [
-              ...systemMessages,
-              ...allMessages.map((m) => ({ role: m.role, content: m.content })),
-            ],
-          }),
-        }
-      );
-
-      if (!resp.ok || !resp.body) {
-        const errData = await resp.json().catch(() => ({}));
-        upsert(errData.error || "Lo siento, ha ocurrido un error.");
-        setIsLoading(false);
-        return;
-      }
-
-      const reader = resp.body.getReader();
-      const decoder = new TextDecoder();
-      let buf = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buf += decoder.decode(value, { stream: true });
-        let nl: number;
-        while ((nl = buf.indexOf("\n")) !== -1) {
-          let line = buf.slice(0, nl);
-          buf = buf.slice(nl + 1);
-          if (line.endsWith("\r")) line = line.slice(0, -1);
-          if (!line.startsWith("data: ")) continue;
-          const json = line.slice(6).trim();
-          if (json === "[DONE]") break;
-          try {
-            const parsed = JSON.parse(json);
-            const c = parsed.choices?.[0]?.delta?.content;
-            if (c) upsert(c);
-          } catch {}
-        }
-      }
-    } catch {
-      upsert("Error de conexión. Inténtalo más tarde.");
-    }
     setIsLoading(false);
   };
 

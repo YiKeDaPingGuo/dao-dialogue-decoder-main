@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import ReactMarkdown from "react-markdown";
 
 interface Msg {
@@ -13,6 +12,13 @@ const SUGGESTIONS = [
   { text: "¿Qué es el Tao?", icon: "🌊" },
   { text: "Explica Wu Wei (无为)", icon: "☯️" },
   { text: "Recomiéndame un capítulo", icon: "📖" },
+];
+
+const MOCK_REPLIES = [
+  "El Tao no es una regla rígida, sino una forma de armonizar con el flujo natural de las cosas. Para empezar: observa, simplifica y evita forzar.",
+  "Wu Wei (无为) no significa 'no hacer nada'; significa actuar sin violencia interior, sin fricción innecesaria y con buena lectura del contexto.",
+  "Si eres principiante, te recomiendo comenzar por el Capítulo 1 y 2: ahí verás las bases de *dao* (道), nombre (名), ser (有) y no-ser (无).",
+  "Una forma práctica de estudiar: 1) lee una frase corta, 2) compárala en dos traducciones, 3) formula tu propia interpretación en español sencillo.",
 ];
 
 const HomepageChat = () => {
@@ -27,67 +33,35 @@ const HomepageChat = () => {
     }
   }, [messages]);
 
+  const pickMockReply = (text: string) => {
+    const normalized = text.toLowerCase();
+    if (normalized.includes("wu wei") || normalized.includes("无为")) {
+      return "Wu Wei (无为) es 'acción sin imposición': menos control obsesivo, más precisión y oportunidad. No es pasividad, es eficacia serena.";
+    }
+    if (normalized.includes("cap") || normalized.includes("capítulo") || normalized.includes("recom")) {
+      return "Para novatos hispanohablantes: empieza por Cap. 1 (道与名), luego Cap. 2 (有无相生). Son la mejor puerta de entrada conceptual.";
+    }
+    if (normalized.includes("tao") || normalized.includes("dao")) {
+      return "Piensa el Tao como un principio de coherencia con la realidad: cuando dejas de forzar, muchas decisiones se vuelven más claras.";
+    }
+    return MOCK_REPLIES[Math.floor(Math.random() * MOCK_REPLIES.length)];
+  };
+
   const streamChat = async (allMessages: Msg[]) => {
     setIsLoading(true);
-    let assistantSoFar = "";
 
-    const upsert = (chunk: string) => {
-      assistantSoFar += chunk;
-      setMessages((prev) => {
-        const last = prev[prev.length - 1];
-        if (last?.role === "assistant") {
-          return prev.map((m, i) => (i === prev.length - 1 ? { ...m, content: assistantSoFar } : m));
-        }
-        return [...prev, { role: "assistant", content: assistantSoFar }];
-      });
-    };
+    const lastUser = allMessages.filter((m) => m.role === "user").at(-1)?.content ?? "";
+    const mock = pickMockReply(lastUser);
 
-    try {
-      const resp = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-          },
-          body: JSON.stringify({ messages: allMessages }),
-        }
-      );
+    await new Promise((resolve) => setTimeout(resolve, 450));
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        content: mock,
+      },
+    ]);
 
-      if (!resp.ok || !resp.body) {
-        const errData = await resp.json().catch(() => ({}));
-        upsert(errData.error || "Lo siento, ha ocurrido un error. Inténtalo de nuevo.");
-        setIsLoading(false);
-        return;
-      }
-
-      const reader = resp.body.getReader();
-      const decoder = new TextDecoder();
-      let buf = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        buf += decoder.decode(value, { stream: true });
-        let nl: number;
-        while ((nl = buf.indexOf("\n")) !== -1) {
-          let line = buf.slice(0, nl);
-          buf = buf.slice(nl + 1);
-          if (line.endsWith("\r")) line = line.slice(0, -1);
-          if (!line.startsWith("data: ")) continue;
-          const json = line.slice(6).trim();
-          if (json === "[DONE]") break;
-          try {
-            const parsed = JSON.parse(json);
-            const c = parsed.choices?.[0]?.delta?.content;
-            if (c) upsert(c);
-          } catch {}
-        }
-      }
-    } catch {
-      upsert("Error de conexión. Por favor, inténtalo más tarde.");
-    }
     setIsLoading(false);
   };
 

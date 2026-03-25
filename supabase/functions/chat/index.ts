@@ -2,7 +2,9 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
 serve(async (req) => {
@@ -10,17 +12,31 @@ serve(async (req) => {
 
   try {
     const { messages } = await req.json();
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
+    const AI_API_KEY =
+      Deno.env.get("OPENAI_COMPAT_API_KEY") ??
+      Deno.env.get("AI_API_KEY") ??
+      Deno.env.get("LOVABLE_API_KEY");
+    const AI_BASE_URL =
+      Deno.env.get("OPENAI_COMPAT_BASE_URL") ??
+      Deno.env.get("AI_BASE_URL") ??
+      "https://ai.gateway.lovable.dev/v1/chat/completions";
+    const AI_MODEL =
+      Deno.env.get("OPENAI_COMPAT_CHAT_MODEL") ??
+      Deno.env.get("AI_CHAT_MODEL") ??
+      "google/gemini-3-flash-preview";
 
-    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    if (!AI_API_KEY) {
+      throw new Error("No AI API key configured in Supabase function secrets");
+    }
+
+    const response = await fetch(AI_BASE_URL, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        Authorization: `Bearer ${AI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-3-flash-preview",
+        model: AI_MODEL,
         messages: [
           {
             role: "system",
@@ -30,8 +46,9 @@ Tu personalidad:
 - Respondes principalmente en español, con términos clave en chino cuando sea relevante.
 - Eres sabio pero accesible, con un toque de humor filosófico.
 - Conoces profundamente el Tao Te Ching, la filosofía taoísta, la cultura china y española.
-- Puedes ayudar con traducciones, interpretaciones filosóficas, y comparaciones culturales.
+- Puedes ayudar con traducciones, interpretaciones filosóficas, comparaciones culturales y explicaciones para estudiantes novatos hispanohablantes.
 - Mantén respuestas concisas (2-3 párrafos máximo) a menos que se pida más detalle.
+- Si la persona parece principiante, usa español claro y sencillo antes de introducir términos más técnicos.
 - Usa ocasionalmente citas del Tao Te Ching para enriquecer tus respuestas.`
           },
           ...messages,
