@@ -18,56 +18,157 @@
 
 ## 🏛️ 2. 核心功能模块 (Core Modules)
 
-### 模块一：中西双语"镜像"书柜 (Bilingual Corpus Bookshelf)
+### 模块一：中西双语“镜像”书柜（已实现 · Reader 原型）
 
-构建动态双语语料库，提供字级别的学术阅读体验。
+该能力已在前端实际落地为 `/studio` 的 `reader` 视图（组件：`src/components/MirrorBookshelf.tsx`）。
 
-* **多版本陈列：** 左侧固定为中文原著，右侧支持切换 5 个不同版本的西班牙语译本。
+```text
+进入 /studio
+  -> Header 切换模块：reader
+  -> MirrorBookshelf
+       |-- 章节选择（Capítulo）
+       |-- 译本选择（Translator dropdown）
+       |-- 双语分栏
+            |-- 左：中文原文（按 selectedWord 做字符高亮）
+            |-- 右：西语译文（可点击“可对齐”词元）
+       |-- 点击词元
+            -> 在 taoData.wordAlignments 中按 (translator-chapter) 查找
+            -> 命中则弹出词级对齐悬浮窗（中文/拼音/意义/句法功能）
+       |-- 章节 AI 解析折叠条（展示 chapter.aiInterpretation）
+```
 
-* **NLP 交互式词法分析：**
+说明（与 README 愿景对齐口径）：
+* “动态对齐/词法分析”当前以 `taoData.ts` 的静态 `wordAlignments` 数据驱动（UI 与交互已跑通，但不是后端实时 NLP）。
+* 章节解析（`chapter.aiInterpretation`）当前为静态内容并以折叠形式呈现。
 
-    * **动态对齐：** 用户点击任意西语单词，触发轻量级悬浮窗。
+### 模块二：多维 AI 认知与生成引擎（已实现 · 部分）
 
-    * **数据展示：** 展现该词对应的中文原文、精准翻译，以及其在当前句子中的句法角色（结合西语的阴阳性、动词变位与中文的主谓宾定状补映射）。
+该能力已在前端实际落地为 `/studio` 的 `cognition` 视图（组件：`src/components/CognitionEngine.tsx`）。
 
-* **章节级 AI 解析：** 点击章节编号，双语面板同步滚动，侧边栏滑出 AI 对该章节核心哲学概念的深度释义。
+```text
+进入 /studio?module=cognition
+  -> CognitionEngine
+       |-- Tabs:
+            | 1) Grafo de Conocimiento (知识图谱)
+            | 2) 大道至简阁 (AI 对话)
+            | 3) Vídeo Generativo (视频锚点，当前为 UI Mock)
+```
 
-### 模块二：多维 AI 认知与生成引擎 (AI Cognition Engine)
+1) 知识图谱（已实现渲染 · 静态数据）
+* `src/components/KnowledgeGraph.tsx` 使用 SVG 进行节点/边渲染（来自 `src/data/taoData.ts` 的 `graphNodes/graphEdges`）。
+* 鼠标 hover 节点/边时高亮相连关系（偏“展示型原型”）。
 
-在前端界面嵌入智能 Agent，提供学术分析与多模态生成。
+2) AI 对话（已实现 · 真请求 + 流式输出）
+* 对话当前实现为 `src/components/PabellonChat.tsx`（不是 PersonaChat 组件）。
+* 交互：顶部标签切换不同“场域”（Negocio / Equipo / Relaciones / Laboral / Educación），每个标签会组装对应的 system 提示（`systemExtra`）。
+* 发送与渲染：
+  * `fetch POST ${VITE_SUPABASE_URL}/functions/v1/chat`
+  * 使用 SSE/流式响应：逐行解析 `data: ...` 中的 `delta.content`，实时把内容追加到最后一条 assistant 消息。
+* 重要环境变量：`VITE_SUPABASE_URL`、`VITE_SUPABASE_PUBLISHABLE_KEY`。
 
-* **1. 翻译学术知识图谱 (Visual Knowledge Graph)：**
+3) 视频锚点（已实现 UI · 当前为 Mock）
+* `CognitionEngine` 的 `video` tab：选择风格 + 展示“Mock player”，当前不生成真实视频内容。
 
-    * **节点 (Nodes)：** 中文核心概念（如"道"）、西语译词（如 "El Camino", "La Naturaleza"）、历代译者。
+补充：`src/components/PersonaChat.tsx` 组件目前存在，但在路由 `/studio` 中未作为主对话入口挂载（当前主入口为 PabellonChat）。
 
-    * **边 (Edges)：** 展现翻译策略（如归化/异化倾向）与词义引申路径，直观对比不同译本的学术风格。
+### 模块三：MBTI 悟道研究报告（已实现 · 静态数据可视化原型）
 
-* **2. 三重境 AI 对话 Agent (Persona-driven AI Chat)：**
+该能力通过模态框 `EnlightenmentReport` 实现（组件：`src/components/EnlightenmentReport.tsx`），由 `/studio` Header 的 “Informe de Iluminación” 按钮触发。
 
-    * **老子本尊：** 使用古奥、充满比喻的口吻，探讨哲学本源。
+```text
+点击 Header: Informe de Iluminación
+  -> EnlightenmentReport modal
+       |-- MBTI Card（mbtiData.type / label）
+       |-- Wu Wei 对齐度（mbtiData.wuWeiAlignment）
+       |-- RadarChart（recharts）
+       |-- 维度条形（dimensions bars）
+```
 
-    * **专业译者：** 聚焦跨文化语境，剖析西语语法转换与"词不达意"的翻译难点。
+说明：当前报告内容基于 `src/data/taoData.ts` 的静态 `mbtiData`，尚未与对话内容/闯关进度进行实时联动推导。
 
-    * **同窗学友：** 采用现代白话文，提供陪伴式、轻松的学习交流。
+### 附：闯关修道（已实现 · Mock 进度 + 测验原型）
 
-* **3. 跨位面影视化生成 (Generative Video Anchors)：**
+模态框入口：`/studio` Header 的 “El Camino（闯关修道）”（组件：`src/components/ElCaminoDelTao.tsx`）。
 
-    * 根据章节情节与抽象概念，生成对应风格的 AI 视频。
+```text
+点击 Header: El Camino del Tao
+  -> ElCaminoDelTao modal
+       |-- 主路径：81章蛇形排列（demo: 解锁仅前3章）
+       |-- 选章节 -> 进入关卡(levels)列表
+       |-- 选 level -> 测验题（mock 题库）
+       |-- 选择答案 -> 更新 score -> 推进下一题（动画节奏 800ms）
+```
 
-    * **可选风格：** 道家经典水墨风、西班牙皇室巴洛克风、拉美异域魔幻现实风。
-
-### 模块三：MBTI 悟道研究报告 (Psychometric Report)
-
-* **静默情感分析：** 在 AI 对话过程中，后台持续进行情感倾向与逻辑意图识别。
-
-* **专属报告生成：** 结合用户在对话中展现的逻辑判断（T/F）与对"无为"理念的接受度，输出一份融合现代心理学与 MBTI 维度的《个人专属道德经研究报告》。
+说明：
+* 目前 `progress` 使用 `initialProgress` 演示态（`useState(initialProgress)`），因此“完成后解锁更多章节”主要体现为原型闭环，而非完整后端/存储驱动。
 
 ---
+## 🌐 其它已实现产品体验（Homepage）
 
-## 🛠️ 3. 技术落地建议 (Technical Implementation Notes)
+首页入口（`/`，组件：`src/pages/Homepage.tsx`）提供“内容浏览 + 快速进入工作台 + 辅助问答”的组合体验：
 
-1.  **前端框架：** 推荐使用 React/Next.js 配合 Tailwind CSS，确保复杂界面的响应速度与状态管理（如切换译本时界面的无缝更新）。
+```text
+Homepage "/"
+  |-- Sticky Header
+        |-- 搜索框（UI 交互）
+             |-- 聚焦 -> 下拉：搜索历史（mock）+ 推荐搜索（mock）
+             |-- 输入 -> 仅影响 UI 状态（当前未做真实搜索）
+        |-- 入口按钮：
+             |-- "Lectura" -> /studio
+             |-- "Cognición IA" -> /studio?module=cognition
+  |
+  |-- Main：
+        |-- Hero 轮播（自动每 5s 切换，图片资源本地 assets）
+        |-- 经典书籍卡片网格（books mock）
+        |-- 文化视频推荐卡片（videos mock，点击打开外链 bilibili）
+  |
+  |-- Right Sidebar（大屏显示：`hidden lg:block`）
+        |-- 用户面板（登录仅使用本地状态 `loggedIn` 演示）
+        |-- 智能问答：HomepageChat
+```
 
-2.  **数据层：** 需要在后端提前处理好中西文本的对齐（Gale-Church 或更现代的嵌入对齐模型），并将词元分类（Token Classification）数据结构化输出给前端。
+### HomepageChat（已实现 · 真请求 + 流式输出）
 
-3.  **图谱渲染：** 可引入 React Flow 或 D3.js 等可视化库来实现翻译知识图谱的动态交互。
+`src/components/HomepageChat.tsx` 的“智能问答助手”实现了流式对话渲染：
+
+```text
+fetch POST ${VITE_SUPABASE_URL}/functions/v1/chat
+Authorization: Bearer ${VITE_SUPABASE_PUBLISHABLE_KEY}
+resp.body 使用 reader 逐行解析：
+  仅提取 delta.content -> upsert 到最后一条 assistant 消息
+```
+
+### 说明（与愿景对齐口径）
+* 首页的“搜索/历史/推荐搜索”当前主要是 UI 演示数据（在代码里是 mock 数组）。
+* Persona 三人设（`src/components/PersonaChat.tsx`）目前未作为首页/Studio 主入口挂载；实际对话入口主要由 `PabellonChat` 与 `HomepageChat` 负责。
+
+## 🛠️ 3. 技术落地建议（Technical Implementation Notes）
+
+1. **路由与模块切换**
+   * `src/App.tsx`：`/` -> `Homepage`，`/studio` -> `Index`
+   * `src/pages/Index.tsx`：
+     * `module=reader | cognition` 通过 `useSearchParams` 控制当前主模块
+
+2. **前端栈**
+   * UI：Tailwind CSS + 组件样式 className（`src/index.css` + 各组件）
+   * 动效：`framer-motion`
+   * 图表：`recharts`（MBTI 雷达图）
+
+3. **数据层（当前原型的“数据真相”）**
+   * `src/data/taoData.ts` 当前承载：
+     * `chapters`（中文/译文/静态 aiInterpretation）
+     * `wordAlignments`（静态词级对齐：spa-traductor + chapter number key）
+     * `graphNodes/graphEdges`（知识图谱节点边）
+     * `mbtiData`（MBTI 维度与对齐度）
+     * `chatPersonas`（Persona Chat 的配置数据，当前未挂载为主入口）
+
+4. **AI 对话接入（已实现 · 当前生效）**
+   * Studio 对话入口：`src/components/PabellonChat.tsx`
+   * 首页对话入口：`src/components/HomepageChat.tsx`
+   * 统一请求地址：`POST ${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`
+   * 统一流式解析方式：逐行解析 `data: ...`，提取 `choices[0].delta.content`
+
+5. **下一步建议（与愿景对齐）**
+   * 把 `wordAlignments` 从静态数据升级为后端对齐/词元分类服务（让“动态对齐”真正实时）。
+   * 把 `ElCaminoDelTao` 的 `progress` 从演示态升级为真实可持久化进度，并与 `EnlightenmentReport` 生成参数联动。
+   * 把 `CognitionEngine` 的 `video` tab 从 UI Mock 替换为真实“生成/播放”接口。
