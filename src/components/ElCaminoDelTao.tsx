@@ -546,8 +546,8 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
   };
 
   const startLessonSession = () => {
-    setCurrentQ(0);
-    setSelectedAnswer(null);
+        setCurrentQ(0);
+        setSelectedAnswer(null);
     setHasChecked(false);
     setCorrectCount(0);
     setSessionHearts(5);
@@ -768,7 +768,7 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-5"
           >
             <ArrowLeft className="w-4 h-4" /> Back to map
-          </button>
+              </button>
 
           <div className="rounded-3xl border border-border bg-gradient-to-br from-secondary/70 to-background p-6 md:p-8 mb-8">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -800,14 +800,14 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
 
           <div className="space-y-4">
             {selectedUnit.lessons.map((lesson, idx) => {
               const unlockedLesson = unlocked && isLessonUnlocked(selectedUnit, idx);
               const lessonProgress = progress[lesson.id];
               return (
-                <motion.div
+              <motion.div
                   key={lesson.id}
                   initial={{ opacity: 0, y: 14 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -849,7 +849,7 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
                           ))}
                         </div>
                       </div>
-                    </div>
+            </div>
 
                     <div className="flex items-center gap-4 flex-wrap lg:justify-end">
                       <div className="text-sm font-body text-muted-foreground">
@@ -871,8 +871,8 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
                     </div>
                   </div>
                 </motion.div>
-              );
-            })}
+                    );
+                  })}
           </div>
         </div>
       </div>
