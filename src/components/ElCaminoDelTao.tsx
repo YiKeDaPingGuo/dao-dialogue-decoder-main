@@ -791,7 +791,7 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
                 <p className="font-chinese text-xs text-muted-foreground mt-3">{selectedUnit.cover}</p>
               </div>
 
-              <div className="rounded-2xl bg-background/80 border border-border p-4 min-w-[220px]">
+              <div className="w-full lg:w-auto rounded-2xl bg-background/80 border border-border p-4 lg:min-w-[220px]">
                 <p className="text-xs text-muted-foreground font-body mb-2">Unit target</p>
                 <div className="space-y-2 text-sm font-body text-foreground">
                   <p>1. 建立主题认知</p>
@@ -949,7 +949,7 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-border bg-background/80 p-5 min-w-[280px]">
+              <div className="w-full lg:w-auto rounded-3xl border border-border bg-background/80 p-5 lg:min-w-[280px]">
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-body mb-3">
                   Session preview
                 </p>
@@ -990,23 +990,23 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
 
     return (
       <div className="flex-1 flex flex-col overflow-hidden">
-        <div className="px-6 md:px-8 py-5 border-b border-border">
+        <div className="px-3 sm:px-6 md:px-8 py-4 sm:py-5 border-b border-border">
           <div className="max-w-5xl mx-auto flex flex-col gap-4">
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center justify-between gap-2 flex-wrap">
               <button
                 onClick={() => setView("lessonStart")}
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" /> Back
               </button>
-              <div className="flex items-center gap-3 text-sm">
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
+              <div className="flex items-center gap-1.5 flex-wrap text-xs sm:text-sm">
+                <div className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
                   <Heart className="w-4 h-4 text-destructive" /> {sessionHearts}
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
+                <div className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
                   <Sparkles className="w-4 h-4 text-accent" /> {sessionXp} XP
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
+                <div className="flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
                   <Flame className="w-4 h-4 text-primary" /> x{Math.max(sessionStreak, 1)}
                 </div>
               </div>
@@ -1094,9 +1094,9 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
           </div>
         </div>
 
-        <div className="px-6 md:px-8 py-4 border-t border-border bg-background/95 backdrop-blur-md">
-          <div className="max-w-3xl mx-auto flex items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground font-body">
+        <div className="px-3 sm:px-6 md:px-8 py-4 border-t border-border bg-background/95 backdrop-blur-md">
+          <div className="max-w-3xl mx-auto flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
+            <p className="text-xs sm:text-sm text-muted-foreground font-body">
               {hasChecked
                 ? sessionHearts > 0
                   ? "看完解释后继续下一题。"
@@ -1107,14 +1107,14 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
               <button
                 onClick={handleCheckAnswer}
                 disabled={selectedAnswer === null}
-                className="px-5 py-3 rounded-2xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm font-body"
+                className="w-full sm:w-auto min-h-11 px-5 py-3 rounded-2xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm font-body"
               >
                 Check
               </button>
             ) : (
               <button
                 onClick={handleContinue}
-                className="px-5 py-3 rounded-2xl bg-accent text-accent-foreground hover:bg-accent/90 transition-colors text-sm font-body"
+                className="w-full sm:w-auto min-h-11 px-5 py-3 rounded-2xl bg-accent text-accent-foreground hover:bg-accent/90 transition-colors text-sm font-body"
               >
                 Continue
               </button>
@@ -1234,9 +1234,9 @@ const ElCaminoDelTao = ({ isOpen, onClose }: Props) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-background flex flex-col"
+          className="fixed inset-0 z-50 bg-background flex flex-col pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]"
         >
-          <div className="flex items-center justify-between px-6 py-4 border-b border-border bg-background/90 backdrop-blur-md">
+          <div className="flex items-center justify-between px-3 sm:px-6 py-3 sm:py-4 border-b border-border bg-background/90 backdrop-blur-md">
             <div>
               <h2 className="font-display text-xl font-bold text-foreground">El Camino del Tao</h2>
               <p className="font-chinese text-xs text-muted-foreground">

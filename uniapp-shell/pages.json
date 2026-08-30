@@ -1,0 +1,14 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "南开问道",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "backgroundColor": "#f7f3e8"
+  }
+}

@@ -22,7 +22,7 @@ const EnlightenmentReport = ({ isOpen, onClose }: Props) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4"
           onClick={onClose}
         >
           <div className="absolute inset-0 bg-foreground/20 backdrop-blur-sm" />
@@ -32,7 +32,7 @@ const EnlightenmentReport = ({ isOpen, onClose }: Props) => {
             exit={{ opacity: 0, scale: 0.92, filter: "blur(8px)" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-2xl glass-panel p-8 shadow-2xl"
+            className="relative w-full max-w-2xl max-h-[calc(100dvh-1.5rem)] overflow-y-auto glass-panel p-5 sm:p-8 shadow-2xl"
           >
             <button
               onClick={onClose}
@@ -91,7 +91,7 @@ const EnlightenmentReport = ({ isOpen, onClose }: Props) => {
             <div className="space-y-2 mt-4">
               {mbtiData.dimensions.map((dim) => (
                 <div key={dim.axis} className="flex items-center gap-3 text-sm font-body">
-                  <span className="w-36 text-right text-muted-foreground truncate">{dim.axis}</span>
+                  <span className="w-24 sm:w-36 text-right text-muted-foreground truncate">{dim.axis}</span>
                   <div className="flex-1 h-2 bg-secondary rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}

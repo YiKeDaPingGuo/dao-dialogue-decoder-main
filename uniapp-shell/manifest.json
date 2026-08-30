@@ -1,0 +1,22 @@
+{
+  "name": "南开问道",
+  "appid": "__UNI__NANKAIQUETAO",
+  "description": "《道德经》中西双语互动学习平台移动端入口。",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "app-plus": {
+    "usingComponents": true,
+    "distribute": {
+      "android": {
+        "permissions": [
+          "<uses-permission android:name=\"android.permission.INTERNET\"/>"
+        ]
+      }
+    }
+  },
+  "h5": {
+    "title": "南开问道"
+  },
+  "vueVersion": "3"
+}

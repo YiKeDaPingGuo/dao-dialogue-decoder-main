@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import { sendChat } from "@/lib/chatApi";
 
 interface Msg {
   role: "user" | "assistant";
@@ -14,12 +15,12 @@ const SUGGESTIONS = [
   { text: "Recomiéndame un capítulo", icon: "📖" },
 ];
 
-const MOCK_REPLIES = [
-  "El Tao no es una regla rígida, sino una forma de armonizar con el flujo natural de las cosas. Para empezar: observa, simplifica y evita forzar.",
-  "Wu Wei (无为) no significa 'no hacer nada'; significa actuar sin violencia interior, sin fricción innecesaria y con buena lectura del contexto.",
-  "Si eres principiante, te recomiendo comenzar por el Capítulo 1 y 2: ahí verás las bases de *dao* (道), nombre (名), ser (有) y no-ser (无).",
-  "Una forma práctica de estudiar: 1) lee una frase corta, 2) compárala en dos traducciones, 3) formula tu propia interpretación en español sencillo.",
-];
+const HOMEPAGE_SYSTEM_PROMPT = `Eres el guía de bienvenida de "¿Qué TAO?", una plataforma intercultural dedicada al Tao Te Ching y a su recepción en el mundo hispanohablante.
+Responde en el idioma de la pregunta; si no está claro, usa español accesible y añade entre paréntesis los conceptos chinos esenciales.
+Ayuda a principiantes a comprender filosofía taoísta, traducción, historia y cultura chino-hispana. Sé cálido, claro y conciso.
+Cuando cites o atribuyas una frase al Tao Te Ching, indica el capítulo si lo conoces con seguridad; si existen traducciones divergentes, explícalo y no inventes citas.
+Distingue entre el sentido histórico del texto y sus aplicaciones contemporáneas. Ofrece preguntas o lecturas siguientes cuando sean útiles.
+No presentes interpretaciones filosóficas como consejo médico, legal o financiero profesional.`;
 
 const HomepageChat = () => {
   const [messages, setMessages] = useState<Msg[]>([]);
@@ -33,36 +34,24 @@ const HomepageChat = () => {
     }
   }, [messages]);
 
-  const pickMockReply = (text: string) => {
-    const normalized = text.toLowerCase();
-    if (normalized.includes("wu wei") || normalized.includes("无为")) {
-      return "Wu Wei (无为) es 'acción sin imposición': menos control obsesivo, más precisión y oportunidad. No es pasividad, es eficacia serena.";
-    }
-    if (normalized.includes("cap") || normalized.includes("capítulo") || normalized.includes("recom")) {
-      return "Para novatos hispanohablantes: empieza por Cap. 1 (道与名), luego Cap. 2 (有无相生). Son la mejor puerta de entrada conceptual.";
-    }
-    if (normalized.includes("tao") || normalized.includes("dao")) {
-      return "Piensa el Tao como un principio de coherencia con la realidad: cuando dejas de forzar, muchas decisiones se vuelven más claras.";
-    }
-    return MOCK_REPLIES[Math.floor(Math.random() * MOCK_REPLIES.length)];
-  };
-
   const streamChat = async (allMessages: Msg[]) => {
     setIsLoading(true);
-
-    const lastUser = allMessages.filter((m) => m.role === "user").at(-1)?.content ?? "";
-    const mock = pickMockReply(lastUser);
-
-    await new Promise((resolve) => setTimeout(resolve, 450));
-    setMessages((prev) => [
-      ...prev,
-      {
-        role: "assistant",
-        content: mock,
-      },
-    ]);
-
-    setIsLoading(false);
+    try {
+      const content = await sendChat(allMessages, HOMEPAGE_SYSTEM_PROMPT);
+      setMessages((prev) => [...prev, { role: "assistant", content }]);
+    } catch (error) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: error instanceof Error
+            ? `Lo siento, el asistente no está disponible ahora. ${error.message}`
+            : "Lo siento, el asistente no está disponible ahora.",
+        },
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const send = (text?: string) => {
@@ -146,12 +135,12 @@ const HomepageChat = () => {
           onKeyDown={(e) => e.key === "Enter" && send()}
           placeholder="Pregunta algo..."
           disabled={isLoading}
-          className="flex-1 bg-secondary/50 border border-border rounded-lg px-3 py-2 text-xs font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring/30 disabled:opacity-50"
+          className="flex-1 bg-secondary/50 border border-border rounded-lg px-3 py-2 text-base sm:text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring/30 disabled:opacity-50"
         />
         <button
           onClick={() => send()}
           disabled={isLoading || !input.trim()}
-          className="p-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
+          className="min-h-11 min-w-11 p-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
         >
           <Send className="w-3.5 h-3.5" />
         </button>

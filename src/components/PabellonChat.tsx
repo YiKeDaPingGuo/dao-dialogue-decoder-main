@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Loader2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import { sendChat } from "@/lib/chatApi";
 
 interface Msg {
   role: "user" | "assistant";
@@ -51,29 +52,6 @@ const tabs = [
   },
 ];
 
-const TAB_MOCK_REPLIES: Record<string, string[]> = {
-  negocio: [
-    "En negocios, la lectura taoísta sugiere: menos reacción impulsiva, más ritmo sostenible. Define una prioridad única por semana y elimina lo accesorio.",
-    "Si un proyecto está estancado, prueba *Wu Wei*: deja de empujar donde hay resistencia y rediseña el camino con menos fricción operativa.",
-  ],
-  equipo: [
-    "Para equipos: primero claridad de roles, luego confianza. Un líder taoísta no controla cada detalle, diseña condiciones para que el equipo fluya.",
-    "Cuando hay conflicto, evita imponer una verdad inmediata. Escucha dos versiones, identifica lo común y acuerda un experimento corto de mejora.",
-  ],
-  relaciones: [
-    "En relaciones íntimas, Tao propone presencia sin posesión. Habla desde necesidad real, no desde miedo al abandono.",
-    "Si hay ansiedad, practica una pausa: respirar, nombrar emoción y responder con amabilidad. Menos control, más conexión auténtica.",
-  ],
-  laboral: [
-    "En el trabajo, 和光同尘 puede entenderse como 'brillar sin fricción': competencia alta, ego bajo y comunicación limpia.",
-    "Para ascenso: aporta valor visible en problemas clave y evita guerras de protagonismo. Coherencia > ruido.",
-  ],
-  educacion: [
-    "En educación familiar: guía sin dominar. Estructura clara, expectativas simples y espacio para que el niño explore por sí mismo.",
-    "Cuando aparezca tensión en crianza, reduce órdenes y aumenta preguntas. Educar es acompañar el crecimiento, no imponer una forma única.",
-  ],
-};
-
 const PabellonChat = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [messages, setMessages] = useState<Msg[]>([
@@ -98,28 +76,29 @@ const PabellonChat = () => {
 
   const streamChat = async (allMessages: Msg[]) => {
     setIsLoading(true);
-
     const tab = tabs[activeTab];
-    const candidates = TAB_MOCK_REPLIES[tab.key] || [
-      "Te propongo empezar con una respuesta breve y aplicable: identifica una sola acción de bajo esfuerzo y alto impacto para hoy.",
-    ];
-    const lastUser = allMessages.filter((m) => m.role === "user").at(-1)?.content ?? "";
-    const normalized = lastUser.toLowerCase();
-    const selected =
-      normalized.includes("wu wei") || normalized.includes("无为")
-        ? "Wu Wei (无为) en este contexto significa intervenir con precisión y no desde ansiedad. Elige una acción pequeña que alivie la fricción principal."
-        : candidates[Math.floor(Math.random() * candidates.length)];
+    const systemPrompt = `Eres el consejero del "Pabellón de la Gran Simplicidad" (大道至简阁), un espacio de reflexión práctica inspirado en el Tao Te Ching.
+${tab.systemExtra}
+Responde en el idioma de la pregunta; si no está claro, usa español natural. Relaciona la situación concreta con uno o dos principios taoístas, sin convertirlos en eslóganes ni atribuir al texto citas inexistentes.
+Primero reconoce brevemente el dilema, después analiza qué está generando fricción y termina con 2 o 3 acciones pequeñas, realistas y no impositivas. Haz una pregunta aclaratoria cuando falte contexto importante.
+No moralices, no diagnostiques y no sustituyas asesoramiento médico, psicológico, legal o financiero. En situaciones de peligro, abuso o crisis, prioriza seguridad y ayuda profesional sobre la interpretación filosófica.`;
 
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    setMessages((prev) => [
-      ...prev,
-      {
-        role: "assistant",
-        content: selected,
-      },
-    ]);
-
-    setIsLoading(false);
+    try {
+      const content = await sendChat(allMessages, systemPrompt);
+      setMessages((prev) => [...prev, { role: "assistant", content }]);
+    } catch (error) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: error instanceof Error
+            ? `El consejero no está disponible ahora. ${error.message}`
+            : "El consejero no está disponible ahora.",
+        },
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const send = () => {
@@ -207,12 +186,12 @@ const PabellonChat = () => {
             onKeyDown={(e) => e.key === "Enter" && send()}
             placeholder={`向${tabs[activeTab].label}问道...`}
             disabled={isLoading}
-            className="flex-1 bg-secondary/50 border border-border rounded-lg px-4 py-2.5 text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 disabled:opacity-50"
+            className="flex-1 bg-secondary/50 border border-border rounded-lg px-4 py-2.5 text-base sm:text-sm font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/30 disabled:opacity-50"
           />
           <button
             onClick={send}
             disabled={isLoading || !input.trim()}
-            className="p-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
+            className="min-h-11 min-w-11 p-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
           >
             <Send className="w-4 h-4" />
           </button>

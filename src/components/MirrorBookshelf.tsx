@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { chapters, translators, wordAlignments, type WordAlignment } from "@/data/taoData";
 import { ChevronDown } from "lucide-react";
@@ -16,10 +16,10 @@ const MirrorBookshelf = () => {
   const chapter = chapters[activeChapter];
   const translation = chapter.translations[activeTranslator];
   const alignmentKey = `${activeTranslator}-${chapter.number}`;
-  const alignments = wordAlignments[alignmentKey] || [];
+  const alignments = useMemo(() => wordAlignments[alignmentKey] || [], [alignmentKey]);
 
   const handleWordClick = useCallback((word: string, e: React.MouseEvent) => {
-    const cleanWord = word.replace(/[.,;:!?¿¡"""''()—–\-]/g, "");
+    const cleanWord = word.replace(/[.,;:!?¿¡"""''()—–-]/g, "");
     const alignment = alignments.find(
       (a) => a.spanish.toLowerCase() === cleanWord.toLowerCase()
     );
@@ -52,7 +52,7 @@ const MirrorBookshelf = () => {
     const words = text.split(/(\s+)/);
     return words.map((word, i) => {
       if (/^\s+$/.test(word)) return <span key={i}>{word}</span>;
-      const cleanWord = word.replace(/[.,;:!?¿¡"""''()—–\-]/g, "");
+      const cleanWord = word.replace(/[.,;:!?¿¡"""''()—–-]/g, "");
       const hasAlignment = alignments.some(
         (a) => a.spanish.toLowerCase() === cleanWord.toLowerCase()
       );
@@ -71,11 +71,11 @@ const MirrorBookshelf = () => {
   };
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex min-h-full flex-col lg:h-full">
       {/* Chapter selector */}
-      <div className="flex items-center gap-3 px-6 py-4 border-b border-border">
+      <div className="flex flex-wrap items-center gap-2 px-3 py-3 sm:px-6 sm:py-4 border-b border-border">
         <span className="text-sm font-body text-muted-foreground">Capítulo</span>
-        <div className="flex gap-1.5">
+        <div className="flex max-w-full gap-1.5 overflow-x-auto pb-1">
           {chapters.map((ch, i) => (
             <button
               key={ch.number}
@@ -94,7 +94,7 @@ const MirrorBookshelf = () => {
         <div className="ml-auto relative">
           <button
             onClick={() => setShowTranslatorDropdown(!showTranslatorDropdown)}
-            className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary text-secondary-foreground text-sm font-body transition-colors hover:bg-accent"
+            className="flex min-h-11 items-center gap-2 px-3 sm:px-4 py-2 rounded-md bg-secondary text-secondary-foreground text-sm font-body transition-colors hover:bg-accent"
           >
             {translators.find((t) => t.id === activeTranslator)?.name}
             <ChevronDown className="w-4 h-4" />
@@ -132,14 +132,14 @@ const MirrorBookshelf = () => {
       </div>
 
       {/* Split reader */}
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden">
+      <div className="grid flex-none grid-cols-1 gap-0 lg:flex-1 lg:grid-cols-2 lg:overflow-hidden">
         {/* Chinese panel */}
-        <div className="p-8 lg:border-r border-border overflow-y-auto bg-secondary/30">
+        <div className="min-h-[38dvh] p-4 sm:p-6 lg:min-h-0 lg:p-8 lg:border-r border-border lg:overflow-y-auto bg-secondary/30">
           <motion.div key={chapter.number} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <span className="text-xs font-body uppercase tracking-[0.2em] text-muted-foreground mb-4 block">
               原文 · Texto Original
             </span>
-            <p className="font-chinese text-2xl lg:text-3xl leading-relaxed tracking-wider text-foreground">
+            <p className="font-chinese text-xl sm:text-2xl lg:text-3xl leading-relaxed tracking-wider text-foreground">
               {chapter.chinese.split("").map((char, i) => {
                 const isHighlighted = selectedWord && selectedWord.chinese.includes(char) && char.trim() !== "";
                 return (
@@ -156,7 +156,7 @@ const MirrorBookshelf = () => {
         </div>
 
         {/* Spanish panel */}
-        <div className="p-8 overflow-y-auto relative" ref={spanishRef}>
+        <div className="min-h-[38dvh] p-4 sm:p-6 lg:min-h-0 lg:p-8 lg:overflow-y-auto relative" ref={spanishRef}>
           <motion.div key={`${chapter.number}-${activeTranslator}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <span className="text-xs font-body uppercase tracking-[0.2em] text-muted-foreground mb-4 block">
               Traducción · {translators.find((t) => t.id === activeTranslator)?.name}
@@ -199,8 +199,9 @@ const MirrorBookshelf = () => {
                     )}
                   </div>
                   <button
+                    aria-label="Cerrar alineación"
                     onClick={() => setSelectedWord(null)}
-                    className="text-muted-foreground hover:text-foreground text-lg leading-none"
+                    className="flex min-h-11 min-w-11 -m-2 items-center justify-center text-lg leading-none text-muted-foreground hover:text-foreground"
                   >
                     ×
                   </button>

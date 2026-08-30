@@ -88,7 +88,8 @@ const KnowledgeGraph = () => {
               transition={{ duration: 0.4, delay: Math.random() * 0.3 }}
               onMouseEnter={() => setHoveredNode(node.id)}
               onMouseLeave={() => setHoveredNode(null)}
-              className="cursor-pointer"
+              onClick={() => setHoveredNode((current) => (current === node.id ? null : node.id))}
+              className="cursor-pointer touch-manipulation"
             >
               <circle
                 cx={node.x}
