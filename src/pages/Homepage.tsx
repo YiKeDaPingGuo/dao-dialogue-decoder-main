@@ -2,21 +2,26 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Search, BookOpen, Brain, ChevronLeft, ChevronRight,
-  X, User, LogOut, Edit, Upload, Lock, Mail
+  Search, BookOpen, Brain, ChevronLeft, ChevronRight, X
 } from "lucide-react";
 import HomepageChat from "@/components/HomepageChat";
 import NewsCenter from "@/components/NewsCenter";
 import VideoCenter from "@/components/VideoCenter";
+import AuthPanel from "@/components/AuthPanel";
 import { newsArticles } from "@/data/news";
 import { videos } from "@/data/videos";
-import iconImg from "@/assets/icon.jpg";
+import iconImg from "@/assets/app-icon.png";
 
 const searchHistory = ["Capítulo 1", "Wu Wei", "道", "Naturaleza", "El Camino"];
 const searchRecommended = ["Tao y Virtud", "无为而治", "Laozi", "Traducción", "Yin Yang"];
 
 const books = [
-  { img: "https://nkuquetao.oss-cn-shanghai.aliyuncs.com/book/lao_tse.png", title: "Tao Te Ching — Lao Tse", sub: "老子 · 道德经" },
+  {
+    img: "https://nkuquetao.oss-cn-shanghai.aliyuncs.com/book/arsovska_lib.png",
+    title: "Dao De Jing — L. Arsovska",
+    sub: "阿尔索夫斯卡 译本 · 2023",
+    href: "/studio",
+  },
   { img: "https://nkuquetao.oss-cn-shanghai.aliyuncs.com/book/j_ferrero.png", title: "El Tao Te King — J. Ferrero", sub: "费雷罗 译本" },
   { img: "https://nkuquetao.oss-cn-shanghai.aliyuncs.com/book/a_galvany.png", title: "Dao De Jing — A. Galvany", sub: "加尔瓦尼 译本" },
   { img: "https://nkuquetao.oss-cn-shanghai.aliyuncs.com/book/I_preciado.png", title: "Libro del Tao — I. Preciado", sub: "普雷夏多 译本" },
@@ -40,19 +45,12 @@ const Homepage = () => {
       img: video.poster,
       title: video.title,
       sub: `视频 · ${video.subtitle}`,
-      open: () => window.open(video.link, "_blank", "noopener,noreferrer"),
+      open: () => navigate(`/videos/${video.id}`),
     })),
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
   const [searchFocused, setSearchFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [authMode, setAuthMode] = useState<"login" | "register">("login");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [displayName, setDisplayName] = useState("");
-  const [authError, setAuthError] = useState("");
-  const [isSubmittingAuth, setIsSubmittingAuth] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -62,28 +60,6 @@ const Homepage = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const submitAuth = async () => {
-    setIsSubmittingAuth(true);
-    setAuthError("");
-    try {
-      const response = await fetch(`/api/auth/${authMode}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password, displayName }),
-      });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || "Authentication failed");
-      localStorage.setItem("nankaiquetao_token", data.token);
-      localStorage.setItem("nankaiquetao_user", JSON.stringify(data.user));
-      setDisplayName(data.user.displayName);
-      setLoggedIn(true);
-    } catch (error) {
-      setAuthError(error instanceof Error ? error.message : "Authentication failed");
-    } finally {
-      setIsSubmittingAuth(false);
-    }
-  };
-
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
@@ -92,19 +68,6 @@ const Homepage = () => {
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
-  }, []);
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem("nankaiquetao_user");
-    const savedToken = localStorage.getItem("nankaiquetao_token");
-    if (savedUser && savedToken) {
-      try {
-        setDisplayName(JSON.parse(savedUser).displayName || "");
-        setLoggedIn(true);
-      } catch {
-        localStorage.removeItem("nankaiquetao_user");
-      }
-    }
   }, []);
 
   return (
@@ -222,9 +185,27 @@ const Homepage = () => {
             <p className="font-chinese text-xs text-muted-foreground mb-4">经典著作</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
               {books.map((book) => (
-                <div key={book.title} className="cursor-default select-none group/book">
+                <div
+                  key={book.title}
+                  role={book.href ? "link" : undefined}
+                  tabIndex={book.href ? 0 : undefined}
+                  onClick={() => book.href && navigate(book.href)}
+                  onKeyDown={(e) => {
+                    if (book.href && (e.key === "Enter" || e.key === " ")) {
+                      e.preventDefault();
+                      navigate(book.href);
+                    }
+                  }}
+                  className={`select-none group/book ${book.href ? "cursor-pointer" : "cursor-default"}`}
+                >
                   <div className="aspect-[3/4] rounded-lg overflow-hidden border border-border shadow-sm">
-                    <img src={book.img} alt={book.title} className="w-full h-full object-cover" />
+                    <img
+                      src={book.img}
+                      alt={book.title}
+                      className={`w-full h-full object-cover transition-transform duration-300 ${
+                        book.href ? "group-hover/book:scale-105" : ""
+                      }`}
+                    />
                   </div>
                   <p className="font-body text-sm text-foreground mt-2 leading-tight line-clamp-2">{book.title}</p>
                   <p className="font-chinese text-xs text-muted-foreground mt-0.5">{book.sub}</p>
@@ -242,82 +223,7 @@ const Homepage = () => {
         {/* ===== RIGHT SIDEBAR ===== */}
         <aside>
           <div className="space-y-4 lg:sticky lg:top-20">
-            {/* User Panel */}
-            <div className="glass-panel p-4">
-              <div className="flex items-center gap-2 mb-3">
-                <User className="w-4 h-4 text-primary" />
-                <h4 className="font-body text-sm font-medium text-foreground">Panel de Usuario</h4>
-              </div>
-              <p className="font-chinese text-xs text-muted-foreground mb-3">用户面板</p>
-
-              {!loggedIn ? (
-                <div className="space-y-2.5">
-                  {authMode === "register" && (
-                    <div>
-                      <label className="font-body text-xs text-foreground mb-1 block">Nombre público</label>
-                      <div className="flex items-center border border-border rounded-lg px-3 h-9 bg-background">
-                        <input value={displayName} onChange={(event) => setDisplayName(event.target.value)} className="flex-1 bg-transparent text-sm outline-none font-body" placeholder="Tu nombre" />
-                      </div>
-                    </div>
-                  )}
-                  <div>
-                    <label className="font-body text-xs text-foreground mb-1 block">
-                      Cuenta <span className="font-chinese text-muted-foreground">(账号)</span>
-                    </label>
-                    <div className="flex items-center border border-border rounded-lg px-3 h-9 bg-background">
-                      <Mail className="w-3.5 h-3.5 text-muted-foreground mr-2" />
-                      <input value={email} onChange={(event) => setEmail(event.target.value)} className="flex-1 bg-transparent text-sm outline-none font-body placeholder:text-muted-foreground" placeholder="correo@ejemplo.com" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="font-body text-xs text-foreground mb-1 block">
-                      Contraseña <span className="font-chinese text-muted-foreground">(密码)</span>
-                    </label>
-                    <div className="flex items-center border border-border rounded-lg px-3 h-9 bg-background">
-                      <Lock className="w-3.5 h-3.5 text-muted-foreground mr-2" />
-                      <input value={password} onChange={(event) => setPassword(event.target.value)} type="password" className="flex-1 bg-transparent text-sm outline-none font-body placeholder:text-muted-foreground" placeholder="至少 8 个字符" />
-                    </div>
-                  </div>
-                  <button
-                    onClick={submitAuth}
-                    disabled={isSubmittingAuth}
-                    className="w-full py-2 rounded-lg text-sm font-body hover:opacity-90 transition-colors" style={{ backgroundColor: '#711a5f', color: 'white' }}
-                  >
-                    {isSubmittingAuth ? "…" : authMode === "login" ? "Iniciar sesión · 登录" : "Crear cuenta · 注册"}
-                  </button>
-                  {authError && <p className="text-xs text-destructive">{authError}</p>}
-                  <button onClick={() => { setAuthMode(authMode === "login" ? "register" : "login"); setAuthError(""); }} className="w-full text-xs text-primary">
-                    {authMode === "login" ? "Crear una cuenta · 注册" : "Ya tengo una cuenta · 登录"}
-                  </button>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center border border-border">
-                      <User className="w-6 h-6 text-muted-foreground" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-1">
-                        <p className="font-body text-sm text-foreground font-medium">{displayName || "Usuario"}</p>
-                        <button className="text-muted-foreground hover:text-accent transition-colors"><Edit className="w-3 h-3" /></button>
-                      </div>
-                      <p className="font-chinese text-xs text-muted-foreground">昵称</p>
-                    </div>
-                  </div>
-                  <button className="w-full py-1.5 rounded-lg border border-border text-sm font-body text-muted-foreground hover:border-accent hover:text-accent-foreground transition-colors flex items-center justify-center gap-1.5">
-                    <Upload className="w-3.5 h-3.5" /> Subir avatar · 上传头像
-                  </button>
-                  <button
-                    onClick={() => { localStorage.removeItem("nankaiquetao_token"); localStorage.removeItem("nankaiquetao_user"); setLoggedIn(false); }}
-                    className="w-full py-1.5 rounded-lg border border-destructive/30 text-destructive text-sm font-body hover:bg-destructive/10 transition-colors flex items-center justify-center gap-1.5"
-                  >
-                    <LogOut className="w-3.5 h-3.5" /> Cerrar sesión · 退出
-                  </button>
-                </div>
-              )}
-            </div>
-
-            {/* AI Chat */}
+            <AuthPanel />
             <HomepageChat />
           </div>
         </aside>

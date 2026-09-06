@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 import { videos } from "@/data/videos";
 
@@ -8,7 +9,7 @@ const VideoCenter = () => {
       <p className="font-chinese text-xs text-muted-foreground mb-4">文化视频</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {videos.map((video) => (
-          <a key={video.id} href={video.link} target="_blank" rel="noopener noreferrer" className="group/card text-left">
+          <Link key={video.id} to={`/videos/${video.id}`} className="group/card text-left">
             <div className="relative aspect-video overflow-hidden rounded-lg border border-border bg-foreground/10">
               <img className="h-full w-full object-cover" src={video.poster} alt={video.title} loading="lazy" />
               <div className="absolute inset-0 flex items-center justify-center bg-foreground/10 transition-colors group-hover/card:bg-foreground/20">
@@ -19,7 +20,7 @@ const VideoCenter = () => {
             </div>
             <p className="mt-2 font-body text-sm text-foreground line-clamp-2 group-hover/card:text-primary">{video.title}</p>
             <p className="mt-0.5 font-chinese text-xs text-muted-foreground">{video.subtitle}</p>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

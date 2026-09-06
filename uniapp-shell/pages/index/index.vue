@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-const siteUrl = "http://47.100.116.121/";
+const siteUrl = "https://47.100.116.121/";
 </script>
 
 <style>

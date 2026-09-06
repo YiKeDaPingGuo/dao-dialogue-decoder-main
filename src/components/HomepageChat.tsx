@@ -1,8 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, Loader2 } from "lucide-react";
+import { Send, Loader2, ImagePlus, Volume2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { sendChat } from "@/lib/chatApi";
+import { useAuth } from "@/hooks/useAuth";
+import { analyzeImage, fileToDataUrl } from "@/lib/visionApi";
+import { useSpeaker, detectLang } from "@/lib/speech";
 
 interface Msg {
   role: "user" | "assistant";
@@ -23,10 +26,13 @@ Distingue entre el sentido histórico del texto y sus aplicaciones contemporáne
 No presentes interpretaciones filosóficas como consejo médico, legal o financiero profesional.`;
 
 const HomepageChat = () => {
+  const { loggedIn } = useAuth();
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const { speakingId, play } = useSpeaker();
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -64,6 +70,32 @@ const HomepageChat = () => {
     streamChat(newMessages);
   };
 
+  const handleImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = ""; // 允许重复选择同一文件
+    if (!file || isLoading) return;
+    setMessages((prev) => [...prev, { role: "user", content: "🖼️ Imagen enviada / 已发送图片" }]);
+    setIsLoading(true);
+    try {
+      const dataUrl = await fileToDataUrl(file);
+      const content = await analyzeImage(dataUrl, { lang: "es" });
+      setMessages((prev) => [...prev, { role: "assistant", content }]);
+    } catch (error) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content:
+            error instanceof Error
+              ? `No pude analizar la imagen. ${error.message}`
+              : "No pude analizar la imagen.",
+        },
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="glass-panel p-4 flex flex-col" style={{ height: 420 }}>
       <div className="flex items-center gap-2 mb-2">
@@ -71,6 +103,11 @@ const HomepageChat = () => {
         <h4 className="font-body text-sm font-medium text-foreground">¿Qué TAO?</h4>
       </div>
       <p className="font-chinese text-xs text-muted-foreground mb-3">智能问答助手</p>
+      {!loggedIn && (
+        <p className="mb-3 rounded-lg bg-secondary/70 px-3 py-2 text-[11px] leading-relaxed text-muted-foreground">
+          El asistente real requiere cuenta. / 未登录仅显示演示回复，请先注册登录。
+        </p>
+      )}
 
       {/* Messages area */}
       <div ref={scrollRef} className="flex-1 overflow-y-auto space-y-2 mb-3 pr-1" style={{ minHeight: 0 }}>
@@ -107,8 +144,20 @@ const HomepageChat = () => {
                   }`}
                 >
                   {m.role === "assistant" ? (
-                    <div className="prose prose-xs prose-stone max-w-none [&_p]:mb-1 [&_p]:mt-0 [&_li]:my-0">
-                      <ReactMarkdown>{m.content}</ReactMarkdown>
+                    <div>
+                      <div className="prose prose-xs prose-stone max-w-none [&_p]:mb-1 [&_p]:mt-0 [&_li]:my-0">
+                        <ReactMarkdown>{m.content}</ReactMarkdown>
+                      </div>
+                      <button
+                        type="button"
+                        aria-label="Leer en voz alta"
+                        title="朗读 · Leer"
+                        onClick={() => play(`msg-${i}`, m.content, { lang: detectLang(m.content) })}
+                        className="mt-1 inline-flex items-center gap-1 text-[11px] text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        <Volume2 className={`h-3.5 w-3.5 ${speakingId === `msg-${i}` ? "text-primary animate-pulse" : ""}`} />
+                        Leer
+                      </button>
                     </div>
                   ) : (
                     m.content
@@ -129,6 +178,22 @@ const HomepageChat = () => {
 
       {/* Input */}
       <div className="flex gap-1.5">
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          onChange={handleImage}
+          className="hidden"
+        />
+        <button
+          onClick={() => fileInputRef.current?.click()}
+          disabled={isLoading}
+          aria-label="Analizar imagen"
+          title="上传图片解析 · Analizar imagen"
+          className="min-h-11 min-w-11 p-2 rounded-lg bg-secondary text-foreground hover:bg-accent transition-colors disabled:opacity-50"
+        >
+          <ImagePlus className="w-3.5 h-3.5" />
+        </button>
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}

@@ -1,9 +1,16 @@
+import { authHeaders, getAuthToken } from "@/lib/auth";
+
 export type ChatMessage = {
   role: "user" | "assistant";
   content: string;
 };
 
-const fallbackApiUrl = "http://47.100.116.121/api/chat";
+const httpsFallbackApiUrl = "https://47.100.116.121/api/chat";
+const httpFallbackApiUrl = "http://47.100.116.121/api/chat";
+
+export const GUEST_CHAT_REPLY = `Este es un mensaje de demostración: el asistente real solo está disponible después de registrarte e iniciar sesión.
+
+这是一条演示回复：请先注册并登录后，才能使用真实的 AI 问答。`;
 
 const requestChat = async (
   url: string,
@@ -12,7 +19,7 @@ const requestChat = async (
 ) => {
   const response = await fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: authHeaders({ "Content-Type": "application/json" }),
     body: JSON.stringify({ messages, systemPrompt }),
   });
   const responseText = await response.text();
@@ -22,7 +29,7 @@ const requestChat = async (
     data = JSON.parse(responseText);
   } catch {
     if (!response.ok) throw new Error(`API 请求失败（HTTP ${response.status}）`);
-    throw new Error("API 返回了无法识别的内容");
+    throw new Error("聊天接口没有返回 JSON，请确认 /api/chat 已正确代理到后端");
   }
 
   if (!response.ok) throw new Error(data?.error || `API 请求失败（HTTP ${response.status}）`);
@@ -31,12 +38,20 @@ const requestChat = async (
 };
 
 export const sendChat = async (messages: ChatMessage[], systemPrompt: string) => {
+  if (!getAuthToken()) {
+    await new Promise((resolve) => window.setTimeout(resolve, 400));
+    return GUEST_CHAT_REPLY;
+  }
+
   try {
     return await requestChat("/api/chat", messages, systemPrompt);
   } catch (error) {
-    const isAlreadyOnServerIp = window.location.hostname === "47.100.116.121";
-    const isSecurePage = window.location.protocol === "https:";
-    if (isAlreadyOnServerIp || isSecurePage) throw error;
-    return requestChat(fallbackApiUrl, messages, systemPrompt);
+    const host = window.location.hostname;
+    if (host === "47.100.116.121" || host.endsWith("nkuquetao.asia")) throw error;
+    try {
+      return await requestChat(httpsFallbackApiUrl, messages, systemPrompt);
+    } catch {
+      return await requestChat(httpFallbackApiUrl, messages, systemPrompt);
+    }
   }
 };

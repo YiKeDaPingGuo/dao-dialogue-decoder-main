@@ -1,0 +1,2751 @@
+注意：西语版扫描可能I和l没有分开，需要清洗一下
+
+第一章
+
+道可道,非常道。名可名,非常名。無名天地之始,有名萬物之母
+
+故常無欲,以觀其妙;常有欲,以觀其徼。此兩者同出而異名,同谓
+
+之玄,玄之又玄,眾妙之門。
+
+1
+
+El Dao del que se puede hablar no es el Dao constante;
+
+el nombre que se le puede asignar no es su nombre permanente.
+
+No tiene nombre el inicio del cielo y la tierra;
+
+sí lo tienen las madres de las diez mil cosas.
+
+Por ello, siempre sin apego se observan sus prodigios,
+
+y siempre con anhelo se indagan sus límites.
+
+Estos dos, juntos, emergen de la misma fuente, pero se nombran
+
+diferente;
+
+juntos se nombran misterio.
+
+Son el misterio del misterio,
+
+puerta de infinitos prodigios.
+
+第二章
+
+天下皆知美之為美,斯惡已。皆知善之為善,斯不善已。故有無相
+
+生,難易相成,長短相較,高下相傾,音聲相和,前後相随。是以聖
+
+人處無為之事,行不言之教;萬物作焉而不辭,生而不有,為而不
+
+恃,功成而弗居。夫唯弗居,是以不去。
+
+2
+
+En el mundo, todos saben que en la belleza emerge la fealdad
+
+y en la bondad asoma la maldad.
+
+Lo manifiesto y lo no manifiesto se generan mutuamente;
+
+fácil y difícil se logran uno al otro;
+
+largo y corto se definen mutuamente;
+
+alto y bajo dependen el uno del otro.
+
+El tono y el sonido se armonizan;
+
+adelante y atrás se persiguen.
+
+Puesto que así son las cosas,
+
+el sabio actúa sin hacer,
+
+enseña sin predicar,
+
+y las diez mil cosas suceden sin pregonar.
+
+Engendra sin poseer,
+
+actúa sin apego,
+
+no se atribuye méritos
+
+y, justo por ello, nada puede perder.
+
+第三章
+
+不尚賢,使民不爭;不貴難得之貨,使民不為盜;不見可欲,使民心
+
+不亂。是以聖人之治,虚其心,實其腹,弱其志,强其骨。常使民無
+
+知無欲。使夫智者不敢為也。為無為,則無不治。
+
+3
+
+Al no valorar a los genios, el pueblo no pelea;
+
+al no apreciar lo escaso, el pueblo no roba;
+
+al no exhibir lo que incita al deseo, el corazón no se alborota.
+
+Así es como el sabio gobierna:
+
+vacía las mentes y llena los vientres;
+
+debilita la voluntad y fortalece los huesos.
+
+Haz que el pueblo nada sepa y nada anhele.
+
+Haz que el sagaz no se atreva a actuar.
+
+Actuando sin hacer, nada queda sin atender.
+
+第四章
+
+道沖而用之或不盈,淵兮似萬物之宗;挫其銳,解其紛,和其光,同
+
+其塵,湛兮似或存。吾不知誰之子,象帝之先。
+
+El Dao se agita, pero nunca se desborda.
+
+¡Qué abismo! Parece el ancestro de las diez mil cosas 
+
+Aplana el filo, deshace el nudo,
+
+pule el brillo y reúne el polvo.
+
+¡Qué profundo! Parece existir...
+
+No sé de quién es hijo;
+
+semeja al ancestro de las deidades.
+
+第五章
+
+天地不仁,以萬物為芻狗;聖人不仁,以百姓為芻狗。天地之間,其
+
+猶橐籥乎?虚而不屈,動而愈出。多言數窮,不如守中。
+
+5
+
+El cielo y la tierra no son compasivos, 
+
+toman las diez mil cosas por perros de paja. 
+
+El sabio no es compasivo;
+
+toma al pueblo por perro de paja.
+
+Entre el cielo y la tierra ¿acaso no sopla un fuelle?
+
+Vacuidad que no se agota; cuanto más se mueve, más emana.
+
+Las palabras pronto se acaban;
+
+nada como conservar el justo medio.
+
+第六章
+
+谷神不死,是謂玄牝。玄牝之門,是謂天地根。綿綿若存,用之不
+
+勤。
+
+6
+
+El espíritu del valle no perece;
+
+se nombra la hembra misteriosa.
+
+La puerta de la hembra es la raíz del cielo y la tierra,
+
+sutil y etérea, mas inagotable en su utilidad.
+
+第七章
+
+天長地久。天地所以能長且久者,以其不自生,故能長生。是以聖人
+
+後其身而身先;外其身而身存。非以其無私邪,故能成其私。
+
+7
+
+El cielo es longevo y la tierra perenne,
+
+y así son porque no se crean a sí mismos;
+
+por ello pueden perdurar.
+
+Así,
+
+el sabio se sitúa atrás para estar adelante,
+
+se relega para perdurar.
+
+¿No es acaso menguar el "yo" lo que permite lograr el "yo"?
+
+第八章
+
+上善若水。水善利萬物而不爭,虚眾人之所惡,故幾於道。居善地,
+
+心善淵,與善仁,言善信,正善治,事善能,動善時。夫唯不爭,故
+
+無尤。
+
+8
+
+La bondad superior es como el agua.
+
+El agua favorece a todas las cosas sin contender
+
+y habita los lugares repelidos por el hombre;
+
+por ello se asemeja al Dao.
+
+Habita en tierras amables,
+
+su corazón es bondad profunda,
+
+se relaciona con compasión,
+
+habla con credibilidad,
+
+gobierna con rectitud,
+
+actúa con habilidad,
+
+se mueve con oportunidad.
+
+El sabio no contiende y, por eso mismo, no se equivoca.
+
+第九章
+
+持而盈之,不如其已;揣而枪之,不可長保。金玉滿堂,莫之能守;
+
+富貴而驕,自遺其咎。功成身退,天之道也。
+
+9
+
+Más vale soltar que aferrarse a lo colmado.
+
+Por más que ocultes y afiles la espada, su filo no durará.
+
+¿Quién puede cuidar un palacio lleno de oro y jade?
+
+Presumir la riqueza augura sólo calamidad.
+
+Saber retirarse al lograr
+
+es el Dao del cielo.
+
+第十章
+
+載營魄抱一,能無離乎?專氣致柔,能嬰兒乎?滌除玄賢,能無疵
+
+乎?爱國治民,能無知乎?天門開閹,能為雌乎?明白四達,能無為
+
+乎?生之,畜之。生而不有,為而不恃,長而不宰,是謂玄德。
+
+10
+
+Nutriendo el alma terrestre, ¿puedes afianzar su unión con el
+
+cuerpo?
+
+Suavizando el qi, ¿puedes ser infante de nuevo?
+
+Puliendo el espejo
+
+misterioso,
+
+¿puedes
+
+eliminar
+
+sus
+
+imperfecciones?
+
+¿Puedes abrir y cerrar la puerta del cielo sin actuar como hembra?
+
+¿Puedes amar la patria y gobernar al pueblo actuando sin hacer?
+
+¿Puedes comprender el mundo rechazando el conocer?
+
+Los crea, los cría,
+
+engendra sin poseer,
+
+actúa sin apego,
+
+cría sin dominar.
+
+Eso se nombra Virtud
+
+misteriosa.
+
+第十一章
+
+三十輻,共一般,當其無,有車之用。埏埴以為器,當其無,有器之
+
+用。鑿戸牖以為室,當其無,有室之用。故有之以為利,無之以為
+
+用。
+
+11
+
+Treinta rayos forman el cubo de la rueda;
+
+el espacio entre ellos permite que la rueda cumpla su funcion.
+
+Se amasa el barro para hacer una vasija;
+
+el vacío en su interior permite que la vasija cumpla su función.
+
+Paredes y ventanas forman un recinto;
+
+en lo no manifiesto está su función.
+
+Por ello, en lo manifiesto está la forma;
+
+en lo no manifiesto, la utilidad.
+
+第十二章
+
+五色令人目盲,五音令人耳聾,五味令人口爽,馳騁畋獵令人心發
+
+狂,難得之貨令人行妨。是以聖人為腹不為目,故去彼取此。
+
+12
+
+Los cinco colores provocan ceguera,
+
+los cinco sonidos provocan sordera,
+
+los cinco sabores entorpecen el paladar.
+
+Las carreras y la caza conducen a la locura,
+
+lo difícil de obtener obstruye la cordura.
+
+Por eso,
+
+el sabio percibe con la entraña y no con los ojos.
+
+Deja aquello y elige esto.
+
+第十三章
+
+寵辱若驚,貴大患若身。何謂寵辱若驚?寵為下,得之若驚失之若
+
+驚,是謂寵辱若驚。何謂貴大患若身?吾所以有大患者,為吾有身,
+
+及吾無身,吾有何患?故貴以身為天下,若可寄天下;爱以身為天
+
+下,若可托天下。
+
+13
+
+La honra y el desdén aturden por igual.
+
+Valora la gran desgracia cual si fuera tu propio cuerpo.
+
+¿Qué significa "La honra y el desdén aturden por igual"?
+
+La honra es mundana. Obtenerla aturde; perderla, también.
+
+Por ello, la honra y el desdén aturden por igual.
+
+¿Qué significa "Valora la gran desgracia cual si fuera tu propio
+
+cuerpo"?
+
+Siento la gran desgracia por tener cuerpo.
+
+Si no tuviera cuerpo, ¿qué desgracia podría sentir?
+
+Por ello,
+
+a quien valora al mundo como a su cuerpo se le puede encomendar
+
+el mundo;
+
+a quien ama al mundo como a su cuerpo se le puede confiar el
+
+mundo.
+
+第十四章
+
+視之不見名日夷,聽之不聞名日希,搏之不得名曰微。此三者不可致
+
+詰,故混而為一。其上不皦,其下不昧。繩繩不可名,復歸於無物。
+
+是謂無狀之狀,無物之象,是謂惚恍。迎之不見其首,随之不見其
+
+後。執古之道,以御今之有。能知古始,是謂道紀。
+
+14
+
+Lo miras,pero no lo ves. Lo nombras invisible.
+
+Lo oyes,pero no lo escuchas. Lo nombras inaudible.
+
+Lo abrazas, pero no lo apresas. Lo nombras diminuto.
+
+Estos tres no se someten al saber, y por eso se funden en uno.
+
+Arriba no es claro,
+
+abajo no es oscuro.
+
+Lo distingue la continuidad y no puede ser nombrado.
+
+Retorna hacia donde no hay cosas;
+
+se llama la forma sin forma, la imagen sin cuerpo;
+
+se llama lo indistinto.
+
+Lo encaras y no ves su rostro,
+
+lo persigues y no ves su dorso.
+
+Abrazar el Dao de antaño permite regir el hoy.
+
+Conocer el comienzo remoto es conocer la hebra del Dao.
+
+第十五章
+
+古之善為士者,微妙玄通,深不可識。夫唯不可識,故強為之容:豫
+
+兮若冬涉川,猶兮若畏四鄰,儼兮其若客,澳兮若冰之將釋,!敦兮其
+
+若樸,曠兮其若谷,渾兮其若濁。孰能濁以靜之徐清?孰能安!以久動
+
+之徐生?保此道者不欲盈,夫唯不盈,故能蔽不新成。
+
+15
+
+Los caballeros antaño versados en el Dao
+
+eran penetrantes y agudos;
+
+su profundidad impedía conocerlos,
+
+y, al no poder conocerlos, sólo quedaba describirlos.
+
+Cautelosos, como quien cruza un río en invierno;
+
+precavidos, como quien teme a sus vecinos;
+
+solemnes, cual huéspedes;
+
+frágiles como el hielo a punto de derretirse;
+
+simples como el tronco sin labrar;
+
+vastos cual valles;
+
+opacos cual lodo.
+
+¿Quién puede tornar el lodo turbio en agua diáfana?
+
+¿Quién puede sacudir lo inerte y hacerlo crear?
+
+Quien adopta a este Dao no busca saciedad,
+
+y justo por no buscarla, permanece y se renueva sin cesar 
+
+第十六章
+
+致虚極,守靜篤。萬物並作,吾以觀復。夫物芸芸,各復歸其良。歸
+
+根日静,是日復命。復命日常,知常日明。不知常,妄作凶。知常
+
+容,容乃公,公乃王,王乃天,天乃道,道乃久,没身不殆。
+
+16
+
+Alcanza la vacuidad hasta el límite, preserva la quietud suprema.
+
+Las diez mil cosas suceden y yo observo su retorno.
+
+Las cosas florecen y retornan a su raíz.
+
+Retornar a la raíz se nombra quietud;
+
+quietud es retornar a lo dispuesto;
+
+retornar a lo dispuesto es lo constante;
+
+conocer lo constante es tener claridad;
+
+desconocer lo constante acarrea calamidad.
+
+Conocer lo constante es abarcar,
+
+abarcar es gobernar,
+
+gobernar es reinar,
+
+reinar es alcanzar el cielo,
+
+el cielo es el Dao.
+
+El Dao prevalece
+
+y el cuerpo no perece.
+
+第十七章
+
+太上,下知有之,其次親而譽之,其次畏之,其次侮之。信不足焉,
+
+有不信焉。悠兮其貴言,功成事遂,百姓皆謂我自然。
+
+17
+
+El pueblo está al tanto de la existencia del gobernante superior
+
+Al buen gobernante lo quiere y respeta;
+
+al inferior le teme;
+
+al peor lo insulta.
+
+Cuando la credibilidad mengua, surge la desconfianza.
+
+Sin prisa, cuidando las palabras,
+
+se logra el mérito, se culmina la obra y el pueblo exclama:"así es"
+
+第十八章
+
+大道廢,有仁義;智慧出,有大偽;六親不和,有孝慈;國家昏亂
+
+有忠臣。
+
+18
+
+Cuando el Dao colapsa, aparecen la humanidad y la justicia.
+
+Cuando la sagacidad asoma, surge la falsedad.
+
+Cuando la armonía abandona la familia, brotan la piedad filial y el
+
+amor paternal.
+
+Cuando el Estado sucumbe al caos, aparece el ministro leal.
+
+第十九章
+
+絕聖棄智,民利百倍;絕仁棄義,民復孝慈;絕巧棄利,盜城無有。
+
+此三者以為文不足,故令有所屬:見素抱樸,少私寡欲。
+
+19
+
+Haz desaparecer la sabiduría, desampara la sagacidad;
+
+el pueblo se beneficiará cien veces.
+
+Haz desaparecer la compasión, desampara la justicia;
+
+el pueblo retornará a la piedad filial y al amor paternal.
+
+Haz desaparecer la astucia y abandona el lucro,
+
+así acabarás con ladrones y bandidos.
+
+Mas estos tres no son suficientes:
+
+aún se necesita
+
+apreciar lo elemental,
+
+abrazar la simpleza,
+
+reducir la parcialidad,
+
+menguar los deseos.
+
+第二十章
+
+絕學無憂,唯之與阿,相去幾何?善之與惡,相去若何?人之所,畏,
+
+不可不畏。荒兮其未央哉!眾人熙熙,如享太牢,如春登台。我獨泊
+
+兮,其未兆,如嬰兒之未孩;儡儡兮,若無所歸。眾人皆有餘,而我
+
+獨若遺。我愚人之心也哉!沌沌兮,俗人昭昭,我獨若昏。俗人察
+
+察,我獨悶悶。澹兮其若海, 零分若無止。眾人皆有以,而我髑頑似
+
+鄙。我獨異於人,而貴食母。
+
+20
+
+Suelta lo aprendido
+
+y las angustias cesarán.
+
+¿Cuánto dista el "sí" humilde del altanero "ajá"?
+
+¿Cuán lejos están la belleza y la fealdad?
+
+Imposible es no temer lo que el otro teme.
+
+¡Lo impenetrable, oh, infinito es!
+
+La multitud alegre, cual de fiesta, cual gozando la primavera,
+
+y yo, en cambio, calmado, sin presagio alguno.
+
+Confundido cual cría que aún no llega a infante,
+
+cansado como si no tuviera dónde volver.
+
+La multitud posee de más y yo cual si nada tuviera.
+
+¡Qué ingenuidad la mía! Todo me da igual.
+
+Los hombres comunes brillan; yo soy opaco.
+
+Los hombres ordinarios cuestionan; yo no distingo.
+
+¡Atormentado, cual la gran mar!
+
+¡Agitado, cual si no pudiera parar!
+
+La muchedumbre posee destrezas; a mí me distingue la torpeza.
+
+Soy distinto a los demás, elijo nutrirme de la Madre.
+
+第二十一章
+
+孔德之容,惟道是從。道之為物,惟恍惟惚。惚兮恍兮,其中有象;
+
+恍兮惚兮,其中有物。窈兮冥兮,其中有精;其精甚真,其中有信。
+
+自今及古,其名不去,以閱眾甫。吾何以知眾甫之狀哉?!以此。
+
+21
+
+Hueca es la Virtud que no sigue al Dao.
+
+Dao es cosa incierta y vaga.
+
+¡Incierta y vaga!; ahí está la imagen.
+
+¡Vaga e incierta!; ahí está la cosa.
+
+¡Oscura y nebulosa!; ahí está la semilla.
+
+La semilla es verdadera, en ella se puede confiar.
+
+Desde la antigüedad hasta hoy, su nombre permanece,
+
+se multiplica y florece.
+
+¿Cómo sé que las cosas son así?
+
+Por el Dao.
+
+第二十二章
+
+曲則全,枉則直,窪則盈,敝則新,少則得,多則惑。是以聖人抱一
+
+為天下式。不自見,故明;不自是,故彰;不自伐,故有功;不自
+
+矜,故長。夫唯不爭,故天下莫能與之爭。古之所謂曲則全者,豈虚
+
+言哉!誠全而歸之。
+
+22
+
+Lo carente se completa,
+
+lo torcido se endereza,
+
+lo hueco se llena,
+
+lo gastado se renueva,
+
+lo poco se obtiene,
+
+lo mucho confunde.
+
+Por ello el sabio abraza al uno como molde del mundo.
+
+No se exhibe y por eso brilla;
+
+no se muestra y por eso es evidente;
+
+no contiende y por eso logra;
+
+no se vanagloria y por eso perdura.
+
+Y justo por no contender, nada bajo el cielo puede contra él.
+
+Aquellas palabras de antaño, "lo escaso se colma", ¿acaso son sólo
+
+palabras vacuas?
+
+Todo,una vez completo,reto, retorna al Dao.
+
+第二十三章
+
+希言自然。故飄風不終朝,驟雨不終日。孰為此者?天地。天地尚不
+
+能久,而況於人乎?故從事於道者,道者同於道,德者同於德,失者
+
+同於失。同於道者,道亦樂得之;同於德者,德亦樂得之;同於失
+
+者,失亦樂得之。信不足焉,有不信焉。
+
+23
+
+Poco predicar es lo natural.
+
+Así, el ventarrón no agota la mañana
+
+ni la lluvia torrencial dura todo el día.
+
+¿Por qué?
+
+Por el cielo y la tierra.
+
+Si sus fenómenos no son perennes,
+
+¿cómo podría serlo el ser humano?
+
+Quien sigue al Dao se funde con el Dao.
+
+Quien sigue a la Virtud se funde con la Virtud.
+
+Quien elige desviarse logra extraviarse.
+
+Dao abraza con júbilo a los que se funden con él;
+
+la Virtud abraza con regocijo a quienes se le unen;
+
+la ruina acoge con alegría a los que la eligen.
+
+Cuando la confianza mengua, la desconfianza asoma.
+
+第二十四章
+
+企者不立,跨者不行,自見者不明,自是者不彰,自伐者無功,自矜
+
+者不長。其在道也,日「餘食贅行」。物或惡之,故有道者不不處。
+
+24
+
+Quien anda en puntas no está parado;
+
+quien anda a zancadas no camina;
+
+quien se exhibe no brilla;
+
+quien se muestra no es evidente;
+
+quien contiende no logra;
+
+quien se vanagloria no perdura.
+
+Esto en el Dao
+
+se llama
+
+sobras de comida,
+
+formas superfluas.
+
+Existe la fealdad,
+
+mas quien abraza al Dao no permanece ahí.
+
+第二十五章
+
+有物混成,先天地生。寂兮寥兮,獨立而不改,周行而不殆,可以為
+
+天下母。吾不知其名,字之日道,強為之名,日大。大日逝,逝日
+
+遠,遠日反。故道大,天大,地大,王亦大。域中有四大,而王居其
+
+一焉。人法地,地法天,天法道,道法自然。
+
+25
+
+... Algo se funde, se forma y nace antes que el cielo y la tierra...
+
+Silencioso y amorfo,
+
+solitario e indivisible.
+
+Circula por doquier sin nunca perecer;
+
+podría ser la Madre del cielo y la tierra.
+
+No sé su nombre;
+
+a fuerza le llamo Dao.
+
+Forzado a nombrarlo más, lo llamo Grande.
+
+Lo grande se admira, lo que se admira está lejos, lo que esta lejos
+
+retorna.
+
+Por ello el Dao es grande, el cielo es grande, la tierra es grande y el
+
+monarca es grande.
+
+En lo vasto hay cuatro grandes y el monarca está en la cima.
+
+El ser humano tiene por norma a la tierra, la tierra al cielo, el cielo al
+
+Dao y el Dao a la espontaneidad.
+
+第二十六章
+
+重為輕根,靜為躁君。是以聖人終日行不離輜重。雖有榮觀,燕處超
+
+然。奈何萬乘之主,而以身輕天下?輕則失本,躁則失君。
+
+26
+
+Lo pesado es raíz de lo ligero;
+
+la quietud, reina del movimiento.
+
+De esta manera,
+
+el sabio anda el día entero
+
+sin apartarse de su carruaje.
+
+Ante paisajes seductores,
+
+prefiere quedarse en su hogar.
+
+¿Acaso el amo de los diez mil carruajes obra a la ligera?
+
+Obrar a la ligera es extraviar la raíz.
+
+Los impetuosos pierden el trono.
+
+第二十七章
+
+善行無轍跡,善言無瑕滴;善數不用籌策;善閉無關楗而不可開,善
+
+結無繩約而不可解。是以聖人常善救人,故無棄人;常善救物,故無
+
+棄物,是謂襲明。故善人者,不善人之師;不善人者,善人之資。不
+
+貴其師,不愛其資,雖智大迷,是謂要妙。
+
+27
+
+El buen caminante no deja huellas;
+
+el buen orador no da lugar a polémica.
+
+Quien sabe contar no necesita ábaco;
+
+quien sabe cerrar no usa cerrojos, mas nadie puede abrir su puerta;
+
+quien sabe amarrar no usa cuerda, mas nadie puede deshacer su
+
+nudo.
+
+Por ello,
+
+el sabio siempre rescata al prójimo y así nadie queda abandonado
+
+aprovecha las cosas y así nada es desperdiciado.
+
+Eso se llama adherirse a la claridad.
+
+Por ello,
+
+los diestros son maestros de los torpes,
+
+y los torpes, el recurso de los diestros.
+
+Quien no valora al maestro ni ama al recurso,
+
+aunque posea conocimiento, está perdido.
+
+Esto se llama misterio elemental.
+
+第二十八章
+
+知其雄,守其雌,為天下谿。為天下谿,常德不離,復歸於嬰兒。知
+
+其白,守其黑,為天下式。為天下式,常德不忒,復歸於無極。知其
+
+榮,守其辱,為天下谷,常德乃足,復歸於樸。樸散則為器,聖人用
+
+之,則為官長,故大制不割。
+
+28
+
+Quien reconoce su virilidad y abraza su lado femenino
+
+es el arroyo del mundo;
+
+no se aparta de la Virtud y retorna a la infancia primigenia.
+
+Quien conoce su blanco y conserva su negro
+
+es el molde del mundo;
+
+al molde del mundo la Virtud no le falla
+
+y retorna a la Unidad.
+
+Quien conoce el honor y conserva la vergüenza
+
+es el valle del mundo;
+
+rebosa de Virtud que retorna a la simpleza, a la madera sin tallar.
+
+La madera se talla y surge el instrumento.
+
+El sabio lo usa para ascender al mando.
+
+El buen carpintero no daña la veta.
+
+第二十九章
+
+将欲取天下而為之,吾見其不得已。天下神器,不可為也,為者敗
+
+之,執者失之。故物或行或随;或歡或吹;或強或赢;或控坐或隳。是
+
+以聖人去甚,去奢,去泰。
+
+29
+
+Quien desea apoderarse del mundo e incidir en él
+
+jamás lo logra; lo he visto yo.
+
+El mundo es una vasija misteriosa,
+
+no se puede manipular.
+
+Quien intenta manipularlo fracasa.
+
+Quien intenta retenerlo lo pierde.
+
+En el mundo
+
+unos marcan el paso, otros siguen la huella;
+
+unos suspiran y otros resoplan con fuerza;
+
+unos son fuertes y avasallan;
+
+otros caen y colapsan.
+
+Por ello el sabio renuncia al abuso, al exceso y a la opulencia
+
+第三十章
+
+以道佐人主者,不以兵强天下。其事好遠。師之所處,荊棘生焉。大
+
+軍之後,必有凶年。善者果而已,不以取強。果而勿矜,果而勿伐,
+
+果而勿驕。果而不得已,果而勿強。物壯則老,是謂不道,不道早
+
+已。
+
+30
+
+Aquel que gobierna de la mano del Dao
+
+no necesita ejércitos para imponer su autoridad.
+
+Sus actos no quedan sin recompensa.
+
+Donde acampan militares sólo maleza crece;
+
+después de las guerras, años de calamidades acaecen.
+
+Quien es bueno para lograr y sabe a tiempo parar
+
+logra sin arrebatar,
+
+logra sin presumir,
+
+logra sin contender,
+
+logra sin jactarse,
+
+logra sin poseer,
+
+logra sin imponer.
+
+Cuando las cosas se robustecen, envejecen;
+
+eso es contrario al Dao,
+
+y lo contrario al Dao perece.
+
+第三十一章
+
+夫佳兵者,不祥之器,物或惡之,故有道者不處。君子居則贵左,用
+
+兵則貴右。兵者不祥之器,非君子之器,不得已而用之,恬淡為上。
+
+勝而不美,而美之者,是樂殺人。夫樂殺人者,則不可以得志於天下
+
+矣。吉事尚左,凶事尚右。偏将軍居左,上將軍居右,言以喪禮處
+
+之。殺人之眾,以哀悲泣之,戰勝,以喪禮處之。
+
+31
+
+Las armas son instrumentos nefastos,
+
+objetos repudiados por quien sigue al Dao.
+
+El caballero valora la izquierda; el militar atesora la derecha. 
+
+Las armas, estos artefactos atroces, no son instrumentos del caballero.
+
+Cuando su uso es imprescindible,
+
+hay que hacerlo con calma y tranquilidad.
+
+La victoria nunca es bella sino para quien goza de matar.
+
+Quien goza de matar jamás ganará la voluntad del pueblo.
+
+En ocasiones festivas se precia la izquierda;
+
+en ocasiones de luto, la derecha.
+
+El teniente se instala a la izquierda,
+
+el comandante a la derecha.
+
+Quien a muchos mató debe asistir con llanto y pena a los fuunerales;
+
+el vencedor también debe honrar a los muertos.
+
+第三十二章
+
+道常無名,樸雖小,天下莫能臣也。侯王若能守之,萬物將自賓。天
+
+地相合,以降甘露,民莫之令而自均。始制有名,名亦既有,夫亦将
+
+知止,知止所以不殆。譬道之在天下,猶川谷之於江海。
+
+32
+
+El Dao constante carece de nombre.
+
+Aunque lo simple es diminuto, nada en el mundo lo puede sonneter
+
+Si reyes y principes abrazan al Dao, las diez mil cosas se alinearn.
+
+Y tal como de la unión entre el cielo y la tierra el dulce rocío del alba
+
+emana,
+
+sin mandatos ni leyes el pueblo por sí solo se ordena.
+
+Con las normas surgieron los nombres,
+
+con los nombres aparece el poseer.
+
+Saber parar evita perecer.
+
+El Dao para el mundo es lo que el arroyo para el valle, lo quel rio para el mar.
+
+第三十三章
+
+知人者智,自知者明。勝人者有力,自勝者強。知足者富。強行者有
+
+志。不失其所者久。死而不亡者壽。
+
+33
+
+Sagaz es quien conoce al otro;
+
+iluminado,quien se conoce a sí mismo.
+
+Quien vence al otro tiene fuerza;
+
+quien se vence a sí mismo es fuerte.
+
+Quien sabe cuándo es suficiente está pleno;
+
+quien fuerza el actuar tiene voluntad.
+
+Quien no pierde su sitio, perdura;
+
+quienmueresinperecer,vive.
+
+第三十四章
+
+大道氾兮,其可左右。萬物恃之而生而不辭,功成不名有。衣養萬物
+
+而不為主,常無欲,可名於小;萬物歸焉而不為主,可名為大。以其
+
+终不自为大,故能成其大。
+
+34
+
+El gran Dao colma
+
+la izquierda y la derecha.
+
+Da vida a las diez mil cosas sin pregonar,
+
+logra sin jactarse,
+
+arropa y nutre todas las cosas sin adueñarse.
+
+No anhela, y por eso se puede llamar diminuto.
+
+Las diez mil cosas retornan sin que él sea su dueño; por eso se puede llamar grande.
+
+Es grande justamente porque jamás se piensa grande.
+
+第三十五章
+
+執大象,天下往。往而不害,安平太。樂與餌,過客止。道之出口,
+
+淡乎其無味,視之不足見,聽之不足聞,用之不可既。
+
+35
+
+Abraza la gran imagen y el mundo vendrá.
+
+Vendrá, no a dañar,
+
+sino a apaciguar y calmar.
+
+La música y los manjares seducen al caminante.
+
+El Dao, en cambio,
+
+es desabrido, insípido.
+
+Lo miras sin llegar a verlo,
+
+lo escuchas sin llegar a oírlo,
+
+lo usas sin nunca agotarlo.
+
+第三十六章
+
+将欲歙之,必固張之;将欲弱之,必固強之;將欲廢之,必固興之;
+
+将欲奪之,必固與之。是謂微明。柔弱勝剛強。魚不可脱於淵,國之
+
+利器不可以示人。
+
+36
+
+Si quieres comprimirlo, primero lo debes extender;
+
+si quieres debilitarlo, primero lo debes fortalecer;
+
+si quieres desaparecerlo, primero lo debes potenciar;
+
+si quieres obtener, primero debes dar.
+
+Eso se llama claridad sutil.
+
+Lo blando y débil vence a lo rígido y fuerte.
+
+El pez no puede abandonar las aguas profundas
+
+ni el Estado mostrar al pueblo su arsenal.
+
+第三十七章
+
+道常無為而無不為。侯王若能守之,萬物將自化。化而欲作,吾路镇
+
+之以無名之樸。無名之樸,夫亦将無欲。不欲以静,天下将自定。
+
+37
+
+El Dao hace sin hacer;
+
+por ello nada queda sin atender.
+
+Si los reyes y príncipes lo abrazan,
+
+las diez mis cosas por sí solas se transforman.
+
+Si al transformarse osa actuar, lo aplacaré
+
+mediante la simpleza sin nombre.
+
+La simpleza sin nombre lleva a no desear.
+
+No desear restaura la calma,
+
+y así, cada cosa en el mundo ocupa su lugar.
+
+第三十八章
+
+上德不德,是以有德;下德不失德,是以無德。上德無為而無以为
+
+下德為之而有以為。上仁為之而無以為;上義為之而有以為。上禮為
+
+之而莫之應,則攘臂而扔之。故失道而後德,失德而後仁,失仁而後
+
+義,失義而後禮。夫禮者,忠信之薄,而亂之首。前識者,道之華,
+
+而愚之始。是以大丈夫虚其厚,不居其薄;虚其實,不居其其華。故去
+
+彼取此。
+
+38
+
+Por no aparentar, la Virtud superior es Virtud;
+
+por aferrarse, la Virtud inferior no es Virtud.
+
+La Virtud superior no actúa con pretensión;
+
+por ello no hay actuar aparente.
+
+El actuar de la Virtud inferior, en cambio,
+
+es evidente.
+
+La benevolencia superior actúa sin actuar aparente.
+
+El actuar de la justicia, en cambio,
+
+es evidente.
+
+El rito superior actúa
+
+y, al no obtener respuesta,
+
+se remanga y avasalla.
+
+Por ello,
+
+cuando el Dao se desvanece, la Virtud aparece;
+
+cuando la Virtud colapsa, la benevolencia se abalanza;
+
+cuando la benevolencia se disipa, la justicia florece;
+
+cuando la justicia se aplaza, los ritos la reemplazan.
+
+Los ritos son lealtad ensombrecida,
+
+confianza menguada,
+
+el principio del caos.
+
+El saber anticipado es la pomposidad del Dao y el inicio de la torpeza.
+
+Por ello,
+
+el caballero se arraiga en lo firme y no en lo blando,
+
+se sitúa en lo cierto y no en lo suntuoso,
+
+deja aquello y elige esto.
+
+第三十九章
+
+昔之得一者,天得一以清,地得一以寧,神得一以靈,谷得一以人盈,
+
+萬物得一以生,侯王得一以為天下貞。其致之,天無以清将恐裂,地
+
+無以寧將恐發,神無以靈将恐歇,谷無以盈將恐竭,萬物無以生将恐
+
+滅,侯王無以貴高将恐蹶。故貴以賤為本,高以下為基。是以侯主自
+
+稱孤、寡、不穀。此非以賤為本邪?非乎?故致數輿無輿。不欲碌碌
+
+如玉,珞珞如石。
+
+39
+
+Lo que antaño alcanzó el Uno...
+
+Al lograrlo el cielo se aclaró,
+
+al adquirirlo la tierra se apaciguó,
+
+al obtenerlo el espíritu se vigorizó,
+
+al alcanzarlo el valle se colmó,
+
+al conseguirlo las diez mil cosas germinaron,
+
+y reyes y príncipes con lealtad actuaron.
+
+Y al no lograr el Uno...
+
+El cielo que no se aclara se agrieta;
+
+la tierra que no se apacigua se desintegra;
+
+el espíritu que no se vigoriza se pasma;
+
+el valle que no se colma se seca;
+
+las diez mil cosas, al nacer, comienzan a perecer;
+
+los reyes y príncipes, sin lealtad, colapsan.
+
+Así entonces,
+
+la humildad es la raíz del alarde,
+
+lo alto el fundamento de lo bajo.
+
+Por ello los reyes y príncipes se nombran a sí mismos
+
+"huérfanos", "abandonados", "insuficientes".
+
+¿Acaso no toman la humildad como raíz del alarde?
+
+¿No es así?
+
+Los que alcanzan renombre nunca lo buscan.
+
+Más que perseguir el brillo del jade,
+
+se aferran a la solidez de la piedra.
+
+第四十章
+
+反者道之動,弱者道之用。天下萬物生於有,
+
+有生於無。
+
+40
+
+El retorno es el movimiento del Dao;
+
+en lo blando reside la utilidad del Dao.
+
+Las diez mil cosas nacen de lo "Manifiesto";
+
+lo "Manifiesto" nace de lo "No manifiesto".
+
+第四十一章
+
+上士聞道,勤而行之;中士聞道,若存若亡;下士聞道,大笑之。不
+
+笑,不足以為道。故建言有之:明道若昧,進道若退,夷道若類,上
+
+德若谷,大白若辱,廣德若不足,建德若偷,質真若渝,大方无限,
+
+大器晚成,大音希聲,大象無形,道隱無名。夫唯道,善貸且成。
+
+41
+
+Cuando el hombre superior oye al Dao, lo sigue con diligencia;
+
+cuando el hombre medio oye al Dao, o se aferra a él o lo abandonpa;
+
+cuando el hombre inferior oye al Dao, suelta una carcajada.
+
+Si no se carcajea, entonces no era el Dao.
+
+Por ello advierte el proverbio:
+
+opaco parece el Dao cuando más iluminado está;
+
+cuanto más avanza, más parece retroceder,
+
+y más rugoso parece cuando más terso está.
+
+La Virtud suprema es como el gran valle.
+
+La gran honra semeja desdén.
+
+La Virtud vasta parece insuficiente.
+
+La Virtud firme parece hurtada;
+
+es tan cierta que parece falsa.
+
+El gran cuadrado carece de ángulos;
+
+el gran artefacto se logra con tiempo;
+
+el gran sonido no se percibe;
+
+la gran imagen carece de forma.
+
+El Dao está oculto y carece de nombre.
+
+Por ello, sólo el Dao puede dar y lograr.
+
+第四十二章
+
+道生一,一生二,二生三,三生萬物。萬物負陰而抱陽,河中氣以為
+
+和。人之所惡,唯孤、寡、不穀,而王公以為稱。故物或損之而益,
+
+或益之而損。人之所教,我亦教之。強梁者不得其死,吾以為教
+
+42
+
+El Dao genera el Uno.
+
+El Uno genera el Dos.
+
+El Dos genera el Tres.
+
+El Tres genera las diez mil cosas.
+
+Las diez mil cosas se sostienen en yin y abrazan a yang.
+
+Qi se agita y alcanza la armonía.
+
+Nada detesta más el humano que el abandono, la orfandad y la escasez.
+
+Los soberanos y duques, en cambio, así se designan.
+
+Las cosas
+
+o dañan para luego beneficiar
+
+o benefician para luego dañar.
+
+Yo sólo transmito lo que otros ya enseñaron:
+
+"El violento nunca llega a su muerte natural".
+
+Seguiré propagando estas enseñanzas.
+
+第四十三章
+
+天下之至柔,馳騁天下之至坚。無有入無閒,吾是以知無為之有益。
+
+不言之教,無為之益,天下希及之。
+
+43
+
+En el mundo lo más blando se impone a lo más rígido.
+
+Lo no manifiesto penetra donde no hay espacios.
+
+Yo conozco las ventajas del no hacer;
+
+una de ellas es enseñar sin predicar,
+
+pero pocos en el mundo lo logran comprender.
+
+第四十四章
+
+名與身孰親?身與貨孰多?得與亡執病?是故甚愛必大費,多藏必必厚
+
+亡,知足不辱,知止不殆,
+
+可以長久。
+
+44
+
+Fama o vida,
+
+¿qué valoras más?
+
+Vida o cosas,
+
+¿de cuál prefieres tener más?
+
+Acumular o soltar,
+
+¿cuál de los dos perjudica más?
+
+Por todo ello,
+
+amar de más es desgastarse,
+
+acumular de más es perder,
+
+saber conformarse no trae vergüenza,
+
+saber parar no acarrea calamidad
+
+y sí permite la continuidad.
+
+第四十五章
+
+大成若缺,其用不弊。大盈若冲,其用不窮。大直若屈,大巧若拙,
+
+大辯若訥。靜勝躁,寒勝熱。清静為天下正。
+
+45
+
+El gran logro semeja carencia, mas su utilidad no es perjudica.
+
+Lo colmado parece vaciarse, mas su utilidad jamás mengua.
+
+La vasta rectitud parece torcida,
+
+el vasto ingenio parece ineptitud,
+
+la gran elocuencia semeja torpeza.
+
+La quietud vence al bullicio,
+
+el frío domina al calor,
+
+la claridad y la calma ordenan al mundo.
+
+第四十六章
+
+天下有道,卻走馬以糞。天下無道,戎馬生於郊。禍莫大放不知足
+
+咎莫大於欲得。故知足之足,常足矣。
+
+46
+
+Cuando el Dao florece en el mundo,
+
+los caballos abonan los campos.
+
+Cuando el Dao desaparece,
+
+sus crías amanecen en el campo de batalla.
+
+No hay peor desgracia que no saber cuándo es suficiente.
+
+No hay peor calamidad que el desear excedentes.
+
+Saber cuándo es suficiente
+
+permite satisfacción permanente.
+
+第四十七章
+
+不出户,知天下;不窺牖,見天道。其出彌遠,其知彌少。是是以聖人
+
+不行而知,不見而明,不為而成。
+
+47
+
+No hay que salir de casa para conocer el mundo.
+
+No hay que asomarse por la ventana para ver el Dao.
+
+Cuanto más lejos indagas,
+
+menos entiendes.
+
+Por ello el sabio conoce sin actuar,
+
+entiende sin ver,
+
+logra sin hacer.
+
+第四十八章
+
+為學日益,為道日損。損之又損,以至於無為。
+
+無為而無不為。取天下常以無事,及其有事,不足以取天下。
+
+48
+
+Estudiar es acumular,
+
+acercarse al Dao es soltar;
+
+soltar y soltar
+
+hasta no actuar.
+
+Y,al no hacer,
+
+nada queda sin atender.
+
+Para gobernar el mundo no hay que hacer de más.
+
+Aquel que se esfuerza en obrar
+
+no es apto para gobernar.
+
+第四十九章
+
+聖人無常心,以百姓心為心。善者,吾善之;不善者,吾亦善之;德
+
+善。信者,吾信之;不信者,吾亦信之;德信。聖人在,天下歙歙
+
+焉,為天下渾其心,百姓皆注其耳目,聖人皆孩之。
+
+49
+
+La mente del sabio no es inmutable;
+
+toma la mente del pueblo por suya.
+
+Con los buenos soy bueno;
+
+con los malos, también lo soy.
+
+La bondad es Virtud.
+
+Confío en los que son de fiar
+
+y también en los que no lo son.
+
+La confianza es Virtud.
+
+El sabio se contiene
+
+y funde su corazón con el mundo.
+
+El pueblo se centra en lo que oye y ve.
+
+El sabio los toma por hijos.
+
+第五十章
+
+出生入死。生之徒,十有三;死之徒,十有三;人之生,動之死地,
+
+亦十有三。夫何故?以其生生之厚。蓋聞善攝生者,陸行不遇兜虎,
+
+入軍不被甲兵;兕無所投其角,虎無所措其爪,兵無所容其刃。夫何
+
+故?以其無死地。
+
+50
+
+Salir a la vida es entrar a la muerte.
+
+Tres de cada diez son discípulos de la vida;
+
+tres de cada diez, discípulos de la muerte,
+
+y en vida se mueven en arenas mortales también tres de cada diez
+
+¿Por qué es esto?
+
+Por mucho aferrarse a la vida.
+
+He oído que quienes saben cultivar la vida
+
+no se topan al tigre ni tropiezan con el rinoceronte.
+
+En batalla no blanden escudo ni empuñan espada.
+
+No dejan sitio donde el rinoceronte pueda insertar su cuerno
+
+ni lugar donde el tigre pueda encajar sus garras,
+
+ni ofrecen espacios donde las dagas puedan penetrar.
+
+¿Por qué? Porque evaden las arenas mortales.
+
+第五十一章
+
+道生之,德畜之,物形之,勢成之。是以萬物莫不尊道而貴德。道之
+
+尊,德之貴,夫莫之命而常自然。故道生之,德畜之。長之育之,亭
+
+之毒之,養之覆之。生而不有,為而不恃,長而不宰。是謂玄德。
+
+51
+
+El Dao engendra, la Virtud nutre;
+
+lo tangible moldea, el potencial intrínseco logra.
+
+Por ello, entre las diez mil cosas no hay una que no respete al Dao, que no valore la Virtud.
+
+Respetar al Dao y valorar la Virtud
+
+no proviene de una orden, sino de la espontaneidad.
+
+Pues el Dao engendra y la Virtud nutre;
+
+hace crecer, madurar,
+
+apacigua, recoge,
+
+cría, multiplica.
+
+Engendra sin poseer,
+
+guía sin retener,
+
+hace madurar sin dominar.
+
+Eso se llama Virtud misteriosa.
+
+第五十二章
+
+天下有始,以為天下母。既得其母,以知其子,既知其子,复守其
+
+母,没身不殆。塞其兌,閉其門,終身不勤。開其兌,濟其其事,終身
+
+不救。見小日明,守柔日強。用其光,復歸其明,無遺身殃,;是為習
+
+常。
+
+52
+
+Lo que en el mundo tiene comienzo es porque tiene una madre
+
+Conocer a la madre es conocer al hijo;
+
+conocer al hijo permite retornar y proteger a la madre.
+
+Sin cuerpo no hay calamidad.
+
+Cubre las grietas, cierra tus puertas, y la vida estará libre de
+
+tormento.
+
+Abre las grietas, dedícate a las minucias, y nada te salvará.
+
+lluminado es quien se muestra diminuto,
+
+fuerte es quien conserva lo blando.
+
+Aprovecha el brillo para volver a la luz.
+
+No heredes calamidades al cuerpo.
+
+Esto se llama adherirse a lo constante.
+
+第五十三章
+
+使我介然有知,行於大道,唯施是畏。大道甚夷,而人好徑。朝甚
+
+除,田甚蕪,倉甚虚;服文綵,带利劍,厭飲食,財貨不有餘;是為夸
+
+盗。非道也哉!
+
+53
+
+Si acaso aprendo algo, será para caminar el Dao;
+
+desviarme sería mi único temor.
+
+El gran Dao es llano,
+
+pero lo torcido atrae al humano.
+
+Cuando la corte es inmaculada, áridos son los campos y vacíos los
+
+graneros,
+
+ostentosos los ajuares, filosas las espadas y fastuosos los banquetes.
+
+Cuando las riquezas sobran, abundan los ladrones.
+
+¡Cuánta ausencia de Dao!
+
+第五十四章
+
+善建者不拔,善抱者不脫,子孫以祭祀不輟。修之於身,其德乃真;
+
+修之於家,其德乃餘;修之於鄉,其德乃長;修之於國,其德乃豐;
+
+修之於天下,其德乃普。故以身觀身,以家觀家,以鄉觀鄉,以国截
+
+國,以天下觀天下。吾何以知天下然哉?以此。
+
+54
+
+Quien sabe sembrar no arranca; quien sabe abrazar no aparta.
+
+Así, hijos y nietos siempre llevarán sacrificios a su altar.
+
+Entonces,
+
+cultivar tu persona es Virtud verdadera;
+
+cultivar tu hogar es Virtud abundante;
+
+cultivar tu poblado es Virtud que crece;
+
+cultivar el Estado es Virtud que rebosa;
+
+cultivar el mundo es Virtud que se esparce.
+
+Por ello,
+
+mira al otro a partir de ti,
+
+mira su casa a partir de la tuya,
+
+mira su pueblo a partir del tuyo,
+
+mira su Estado a partir del tuyo,
+
+mira su mundo a partir del tuyo.
+
+¿Cómo sé que todo bajo el cielo así funciona?
+
+Por el Dao.
+
+第五十五章
+
+含德之厚,比於赤子。蜂蕾虺蛇不螫,猛獸不據,攫烏不搏。骨弱筋
+
+柔而握固。未知牝牡之合而全作,精之至也。終日號而不嗄,和之至
+
+也。知和日常,知常日明。益生日祥。心使氣日強。物壯則老,謂之
+
+不道,不道早已。
+
+55
+
+Aquel con Virtud abundante es cual infante:
+
+el veneno no lo hiere,
+
+las bestias no lo muerden,
+
+las aves de rapiña no lo apresan.
+
+Sus huesos son débiles y sus músculos blandos, pero aprieta fuerte.
+
+No conoce aún la unión entre hombre y mujer,
+
+mas su sexo rebosa y su esencia vital es plena.
+
+Puede llorar el día entero sin enronquecer, pues fluye en armornía.
+
+Conocer la armonía es permanencia;
+
+conocer la permanencia es iluminación;
+
+la vida desbocada es calamidad.
+
+Controlar con la mente el qi es violentar.
+
+Cuando las cosas robustecen envejecen.
+
+A eso se le llama el no Dao;
+
+el no Dao es el fin.
+
+第五十六章
+
+知者不言,言者不知。塞其兌,閉其門,挫其銳,解其分,和其光,
+
+同其塵,是謂玄同。故不可得而親,不可得而疏;不可得而利,不可
+
+得而害;不可得而貴,不可得而賤。故為天下貴。
+
+56
+
+Quien sabe no predica; quien predica no sabe.
+
+Cubre las grietas y cierra las puertas;
+
+aplana el filo y deshaz el nudo;
+
+pule el brillo y reúne el polvo.
+
+Eso se llama consonancia misteriosa.
+
+Por ello,
+
+al no poder alcanzarla,
+
+unos se acercan y otros se alejan.
+
+Al no poder lograrla,
+
+unos benefician y otros perjudican.
+
+Al no poder obtenerla,
+
+unos la valoran y otros la desprecian.
+
+¡Por ello es tan apreciada en el mundo!
+
+第五十七章
+
+以正治國,以奇用兵,以無事取天下。吾何以知其然哉?以此。天下
+
+多忌諱,而民彌貧;民多利器,國家滋昏;人多伎巧,奇物滋起;法
+
+令滋彰,盗賊多有。故聖人云:「我無為,而民自化;我好静,而民
+
+自正;我無事,而民自富;我無欲,而民自樸。」
+
+57
+
+Gobierna al Estado con rectitud usual,
+
+gana las guerras con tácticas imprevisibles, 
+
+logra sin obrar.
+
+Yo sé que así son las cosas.
+
+Cuantos más tabúes y prohibiciones, más rebeliones;
+
+cuantas más espadas afiladas, más caos;
+
+cuanta más astucia, más perversidad;
+
+cuantas más normas y leyes, más ladrones.
+
+Por ello el sabio dice:
+
+yo no actúo y el pueblo por sí solo se transforma;
+
+me apego a la calma y el pueblo se ordena;
+
+yo no actúo y el pueblo por sí solo se enriquece;
+
+yo no anhelo y el pueblo por sí solo retorna a la simpleza.
+
+第五十八章
+
+其政悶悶,其民淳淳;其政察察,其民缺缺。禍兮福之所倚,福兮禍
+
+之所伏。孰知其極?其無正。正復為奇,善復為妖。人之迷,其日固
+
+久。是以聖人方而不割,廉而不劇,直而不肆,光而不耀。
+
+58
+
+Gobierno sigiloso, pueblo honesto;
+
+gobierno inquisidor, pueblo malicioso.
+
+La desgracia, ¡oh!, se apoya en la fortuna.
+
+La fortuna, ¡oh!, es presa de la desgracia.
+
+¿Pero quién conoce el vaivén de los extremos?
+
+Son impredecibles.
+
+Lo predecible retorna a lo impredecible
+
+y la bondad a la vileza.
+
+Ese enigma desde antaño perturba al ser humano.
+
+Por ello,
+
+el sabio
+
+discierne sin separar,
+
+divide sin cortar,
+
+endereza sin juzgar,
+
+brilla sin quemar.
+
+第五十九章
+
+治人事天,莫若嗇。夫唯嗇,是謂早服;早服謂之重積德;重積德則
+
+無不克;無不克則莫知其極;莫知其極,可以有國;有國之母,可以
+
+長久;是謂深根固柢,長生久視之道。
+
+59
+
+Para gobernar al pueblo y obrar bajo el cielo, nada como economizar.
+
+Economizar es prever;
+
+prever es valorar la Virtud de acumular;
+
+valorar la Virtud de acumular es poder domarlo todo.
+
+No es fácil estimar los límites de quien puede domarlo todo 
+
+A él, se le puede otorgar el Estado.
+
+Abrazando a la Madre, el Estado puede perdurar.
+
+A eso se le llama
+
+raíces hondas, cimientos firmes,
+
+Dao fecundo y manifiesto.
+
+第六十章
+
+治大國,若烹小鮮。以道蒞天下,其鬼不神;非其鬼不神,其神不傷
+
+人;非其神不傷人,聖人亦不傷人。夫雨不相傷,故德交歸焉특。
+
+60
+
+Gobernar un Estado es como freír un pez.
+
+Si se gobierna con el Dao,
+
+las fuerzas malignas carecen de vitalidad
+
+y no hieren al ser humano.
+
+Y si aquéllas no lo hieren,
+
+el sabio tampoco.
+
+Cuando estos pares no se hieren entre sí,
+
+la Virtud fluye y retorna.
+
+第六十一章
+
+大國者下流,天下之交。天下之牝,牝常以静勝牡,以靜為下。故大
+
+國以下小國,則取小國;小國以下大國,則取大國。故或下以取,或
+
+下而取。大國不過欲兼畜人,小國不過欲入事人。夫兩者各得其所
+
+欲,大者宜為下。
+
+61
+
+Un gran Estado fluye hacia abajo,
+
+se funde con el mundo,
+
+como Hembra.
+
+La Hembra vence al Macho con quietud;
+
+la quietud se sitúa debajo.
+
+Por ello,
+
+el Estado grande se coloca debajo y toma al Estado pequeño;
+
+el Estado pequeño se coloca debajo y se une al gran Estado.
+
+Colocarse debajo sirve para tomar y ser tomado.
+
+El gran Estado sólo quiere crecer y nutrir a su gente;
+
+el pequeño sólo busca servir y preservar su pueblo.
+
+Así, cada uno obtiene lo que anhela.
+
+Al grande le conviene colocarse debajo.
+
+第六十二章
+
+道者萬物之奥。善人之寶,不善人之所保。美言可以市,尊行可以加
+
+人。人之不善,何棄之有?故立天子,置三公,雖有拱璧以先駟馬,
+
+不如坐進此道。古之所以贵此道者何?不日:以求得,有罪以免邪
+
+故為天下貴。
+
+62
+
+El Dao es el refugio de todas las cosas.
+
+El tesoro del bondadoso,
+
+el cobijo del malicioso.
+
+Las palabras bellas pueden comprar respeto,
+
+los actos refinados permiten acumular.
+
+A la malicia humana la abandonas y ¿deja de existir?
+
+Cuando el Hijo del cielo asume el trono
+
+y los tres ministros ocupan sus cargos,
+
+aunque ofrezcan jade y escuadrilla de corceles,
+
+es mejor seguir el Dao.
+
+¿Por qué desde antaño se valora tanto al Dao?
+
+¿Acaso no se dice: busca y encontrarás,
+
+gracias a tus errores calamidades evitarás?
+
+Por ello el Dao es lo más valioso bajo el cielo.
+
+第六十三章
+
+為無為,事無事,味無味。大小多少,報怨以德。圖難於其易,為大
+
+於其細;天下難事必作於易,天下大事必作於細。是以聖人終不為
+
+大,故能成其大。夫輕諾必寡信,多易必多難。是以聖人猶難之,故
+
+終無難矣。
+
+63
+
+Actúa sin actuar,
+
+obra sin obrar,
+
+saborea lo insípido.
+
+Lo grande fue pequeño, lo mucho fue poco;
+
+responde al odio con Virtud,
+
+atiende lo complejo desde lo simple,
+
+logra lo grande desde lo diminuto.
+
+Lo difícil del mundo se atiende desde lo simple;
+
+las grandes obras comienzan por actos minúsculos.
+
+Por ello,
+
+el sabio jamás atiende lo grande
+
+y logra grandeza.
+
+Las promesas a la ligera son palabras vacías;
+
+mucha facilidad trae grandes dificultades.
+
+Por ello,
+
+el sabio valora la dificultad
+
+y al final nada le es difícil.
+
+第六十四章
+
+其安易持,其未兆易謀。其脆易泮,其微易散。為之於未有,治之於
+
+未亂。合抱之木,生於毫末;九層之臺,起於累土;千里之行,始於
+
+足下。為者敗之,執者失之。是以聖人無為故無敗,無執故無失。民
+
+之從事,常於幾成而敗之。慎終如始,則無敗事。是以聖人欲不欲,
+
+不贵難得之貨;學不學,復眾人之所過。以輔萬物之自然,而而不敢
+
+為。
+
+64
+
+Es fácil apresar lo calmado,
+
+es fácil planear antes del augurio,
+
+es fácil quebrar lo frágil,
+
+es fácil disipar lo ínfimo.
+
+Ocúpate antes de que surja,
+
+ordénalo antes de que se enrede.
+
+Un árbol que pueden dos brazos rodear
+
+fue primero una diminuta raíz.
+
+Una pagoda de nueve pisos
+
+comenzó con un montículo de tierra.
+
+Un viaje de mil millas
+
+comenzó con un paso.
+
+Quien actúa fracasa;
+
+quien se aferra pierde.
+
+Por ello el sabio no actúa, y no fracasa.
+
+No se aferra, y no pierde.
+
+Cuando el pueblo busca actuar,
+
+suele fracasar justo antes de lograr.
+
+Pues hay que saber terminar,
+
+tanto como saber comenzar.
+
+Sólo así no hay lugar para el fracaso.
+
+Por ello,
+
+el sabio desea no desear,
+
+no valora las cosas difíciles de obtener,
+
+aprende a no aprender,
+
+recorre el sendero que el pueblo ya caminó,
+
+se adhiere a la espontaneidad de las diez mil cosas y,por ello,no se atreve a actuar.
+
+第六十五章
+
+古之善為道者,非以明民,将以愚之。民之難治,以其智多。故以智
+
+治國,國之賊;不以智治國,國之福。知此兩者亦稽式。常知和稽式,
+
+是謂玄德。玄德深矣,遠矣,與物反矣,然後乃至大順。
+
+65
+
+Aquellos antaño diestros en el Dao
+
+no lo empleaban para iluminar al pueblo,
+
+sino para mantener su ingenuidad.
+
+Gobernar es difícil porque abunda la sagacidad.
+
+Gobernar con sagacidad incita a la astucia;
+
+gobernar sin sagacidad trae plenitud.
+
+Conocer estos dos es conocer el molde.
+
+Conocer el molde es Virtud misteriosa,
+
+profunda y lejana,
+
+que retorna a las cosas y fluye con ellas.
+
+第六十六章
+
+江海所以能為百谷王者,以其善下之,故能為百谷王。是以欲上民,
+
+必以言下之。欲先民,必以身後之。是以聖人處上而民不重,處前而
+
+民不害。是以天下樂推而不厭,以其不爭,故天下莫能與之爭。
+
+66
+
+Los ríos y los mares son señores de los cien valles.
+
+Es su virtud situarse debajo; por ello pueden ser sus reyes.
+
+Por ello,
+
+si quieres estar por encima del pueblo,
+
+tus palabras deben indicar lo contrario.
+
+Si quieres preceder al pueblo, debes situarte atrás.
+
+Así,
+
+el sabio está encima, pero el pueblo no siente su peso;
+
+está delante, pero no lastima;
+
+promueve, pero no aprisiona.
+
+Al no contender, nada en el mundo puede luchar contra él...
+
+第六十七章
+
+天下皆謂我道大,似不肖。夫唯大,故似不肖。若肖,久矣其細也
+
+夫!我有三寶,持而保之。一日慈,二日儉,三日不敢為天下先。慈
+
+故能勇;儉故能廣;不敢為天下先,故能成器長。今舍慈且勇,舍便
+
+且廣,舍後且先,死矣!夫慈以戰則勝,以守則固。天将救之,以慈
+
+衛之。
+
+67
+
+Bajo el cielo todos dicen que mi Dao es grande;
+
+tal parece que con nada se compara.
+
+Justo por su grandeza a nada semeja;
+
+si a algo semejara, ¡su grandeza menguaría!
+
+Tengo yo tres tesoros que valoro y protejo:
+
+la compasión, la frugalidad y jamás preceder.
+
+De la compasión surge la valentía;
+
+de la frugalidad, la generosidad,
+
+y de jamás preceder, el liderazgo.
+
+Pero hoy se abandona la compasión y, con ella, la valentía:
+
+la frugalidad y, con ella, la generosidad.
+
+Se sacrifica el atrás por la delantera y eso es ¡la muerte miisma!
+
+La compasión vence en la guerra y resguarda al Estado,
+
+y entonces el cielo rescata y protege con compasión.
+
+第六十八章
+
+善為士者不武,善戰者不怒,善勝敵者不與,善用人者為之下,是是謂
+
+不爭之德,是謂用人之力,是謂配天古之極。
+
+68
+
+Quien sabe pelear no emplea armas;
+
+quien sabe luchar controla su ira;
+
+quien sabe vencer al enemigo no acude a su encuentro;
+
+quien a otros sabe usar se coloca por debajo de ellos.
+
+He aquí la Virtud de no contender,
+
+la destreza de saber disponer de los demás.
+
+Desde tiempos remotos, jeso es ser digno par del cielo!
+
+第六十九章
+
+用兵有言:「吾不敢為主而為客,不敢進寸而退尺。」是謂行無行,
+
+攘無臂,扔無敵,執無兵。禍莫大於輕敵,輕敵幾喪吾實。故抗兵相
+
+加,
+
+哀者勝矣。
+
+69
+
+Quienes comandan ejércitos dicen:
+
+prefiero ser huésped y no anfitrión;
+
+prefiero retroceder diez pasos y no avanzar una pulgada.
+
+Esto se llama
+
+avanzar sin andar,
+
+enrollarse las mangas sin empuñar,
+
+prepararse mas no embestir.
+
+¿Acaso el enemigo osará atacar?
+
+No hay peor catástrofe
+
+que subestimar al enemigo.
+
+Significa perderlo todo.
+
+Por ello,
+
+cuando dos ejércitos se enfrentan,
+
+quien lamenta el encuentro resulta victorioso.
+
+第七十章
+
+吾言甚易知,甚易行。天下莫能知,莫能行。言有宗,事有君。夫唯
+
+無知,是以不我知。知我者希,則我者貴。是以聖人被褐懷压。
+
+70
+
+Es fácil comprender mis palabras
+
+y también fácil actuar en concordancia.
+
+Pero el mundo no las comprende
+
+ni tampoco las pone en práctica.
+
+Mis palabras tienen ancestros,
+
+y las acciones, predecesores.
+
+Quienes no entienden esto
+
+tampoco me entienden a mí.
+
+Pocos me conocen:
+
+he ahí mi valor.
+
+Los ropajes raídos del sabio ocultan fino jade en su interior.
+
+第七十一章
+
+知不知上,不知知病。夫唯病病,是以不病。聖人不病,以其病病,
+
+是以不病。
+
+71
+
+Saber que no sabes es superior.
+
+No saber lo que sabes es padecer.
+
+Sólo quien conoce la enfermedad deja de padecer.
+
+El sabio no padece porque conoce la enfermedad.
+
+Conocer la enfermedad es jamás padecer.
+
+第七十二章
+
+民不畏威,則大威至。無狎其所居,無厭其所生。夫唯不厭,是以不귀
+
+厭。是以聖人自知不自見;自愛不自貴。故去彼取此。
+
+72
+
+Cuando el pueblo no teme a la autoridad,
+
+grande es el poder del Estado.
+
+No te metas en sus casas,
+
+no obstaculices sus vidas,
+
+no los orilles, déjalos crecer;
+
+sólo así podrás retener el poder.
+
+Por ello,
+
+el sabio se conoce, mas no se exhibe;
+
+se ama,mas no se idolatra.
+
+Deja aquello y toma esto.
+
+第七十三章
+
+勇於敢則殺,勇於不敢則活。此兩者,或利或害。天之所惡,孰知其
+
+故?是以聖人猶難之。天之道,不爭而善勝,不言而善應,不召罐
+
+來,禪然而善謀。天網恢恢,疏而不失。
+
+73
+
+El temerario y atrevido perece.
+
+El valiente y prudente permanece.
+
+De estos dos, uno es benéfico; el otro, perjudicial.
+
+Aquello que el cielo repudia,
+
+¿acaso alguien conoce sus razones?
+
+Incluso el sabio alberga sus dudas.
+
+El Dao del cielo es
+
+vencer sin luchar,
+
+responder sin hablar,
+
+acudir sin ser llamado,
+
+cual diestro tejedor saber planear.
+
+Las redes del cielo no tienen límites;
+
+se estiran,mas no se rasgan.
+
+第七十四章
+
+民不畏死,奈何以死懼之?若使民常畏死,而為奇者,吾得執而殺
+
+之,孰敢?常有司殺者殺。夫代司殺者殺,是謂代大匠断,夫代大匠
+
+断者,希有不傷其手矣。
+
+74
+
+Si el pueblo no le teme a la muerte,
+
+¿para qué amenazarlo con ella?
+
+Si a quien infunde el miedo a la muerte
+
+lo debo atrapar y matar,
+
+¿me atreveré?
+
+Existen verdugos encargados de ejecutar.
+
+Querer tomar su lugar,
+
+¿acaso no es pretender reemplazar al carpintero?
+
+Quien reemplaza al carpintero siempre se corta la mano.
+
+第七十五章
+
+民之饑,以其上食税之多,是以饑。民之難治,以其上之有為,是以
+
+難治。民之輕死,以其求
+
+生之厚,是以輕死。夫唯無以生為者,是賢於
+
+貴生。
+
+75
+
+Hay hambruna cuando los tributos son desproporcionados:
+
+por eso hay hambruna.
+
+Gobernar es difícil cuando los de arriba actúan de más;
+
+por eso es difícil gobernar.
+
+El pueblo muere con facilidad porque se aferra a la vida;
+
+por eso el pueblo muere con facilidad.
+
+Vivir sin actuar
+
+es mejor que sobrevalorar la vida.
+
+第七十六章
+
+人之生也柔弱,其死也堅強。萬物草木之生也柔脆,其死也枯搞。故
+
+坚强者死之徒,柔弱者生之徒。是以兵强則不勝,木強則兵。強大處
+
+下,柔弱處上。
+
+76
+
+El humano es blando y flexible en vida;
+
+duro y rígido al morir.
+
+Las plantas son frágiles y blandas al nacer;
+
+se marchitan y secan al perecer.
+
+Lo duro y lo rígido son discípulos de la muerte;
+
+lo blando y lo flexible,discípulos de la vida.
+
+Así, quien en batalla emplea la fuerza no triunfa.
+
+Cuando el árbol endurece, se tala.
+
+Lo duro y rígido es inferior,
+
+lo blando y flexible es superior.
+
+第七十七章
+
+天之道,其猶張弓與?高者抑之,下者奉之;有餘者損之,不足者補
+
+之。天之道,損有餘而補不足。人之道則不然,損不足以奉有餘。孰
+
+能有餘以奉天下,唯有道者。是以聖人為而不恃,功成而不不虚,其不
+
+欲見賢。
+
+77
+
+El Dao del cielo
+
+¿acaso duda en templar el arco?
+
+Desciende lo alto,
+
+eleva lo bajo;
+
+disipa lo sobrante,
+
+compensa lo carente.
+
+... El Dao del cielo
+
+disipa lo sobrante
+
+y compensa lo carente.
+
+El Dao del humano no es así:
+
+disipa lo carente
+
+para desbordar lo sobrante.
+
+¿Quién es capaz de ofrendar al mundo lo que le sobra?
+
+Sólo aquel que posee el Dao.
+
+Por ello el sabio actúa sin aferrarse,
+
+logra sin asentarse
+
+y sin deseo de mostrarse.
+
+第七十八章
+
+天下莫柔弱於水,而攻堅強者莫之能勝,以其無以易之。弱之勝強
+
+柔之勝剛,天下莫不知莫能行。是以聖人云:「受國之垢,是謂社稷
+
+主;受國不祥,是為天下王。」正言若反。
+
+78
+
+Nada en el mundo es más blando y flexible que el agua,
+
+mas ninguna cosa, por rigida y fuerte que sea, la puede vencer.
+
+En lo no manifiesto residen sus cambios.
+
+Lo débil vence a lo fuerte,
+
+lo flexible vence a lo rígido.
+
+Bajo el cielo todos lo saben,
+
+mas no lo practican.
+
+Por ello dicen los sabios:
+
+"Quien no teme enlodarse
+
+es señor de las cosechas;
+
+quien puede con las calamidades del Estado
+
+es el rey del mundo".
+
+Éstas son palabras rectas
+
+que parecen torcidas.
+
+第七十九章
+
+和大怨,必有餘怨,安可以為善?是以聖人執左契,而不責放人。有
+
+德司契,無德司徹。天道無親,常與善人。
+
+79
+
+En toda reconciliación
+
+queda siempre un vestigio de resentimiento.
+
+¿Dónde está entonces la bondad?
+
+El sabio mantiene el comprobante,
+
+pero no presiona por el pago.
+
+El virtuoso busca que se cumpla el trato;
+
+el no virtuoso exige el pago de la deuda.
+
+El cielo no es parcial,
+
+mas acompaña al bondadoso.
+
+第八十章
+
+小國寡民。使有什伯之器而不用,使民重死而不遠徙。雖有舟輿,無
+
+所乘之,雖有甲兵,無所陳之。使人復結繩而用之,甘其食,美其
+
+服,安其居,樂其俗。鄰國相望,雞犬之聲相聞,民至老死,不相往
+
+來。
+
+80
+
+Estado pequeño, población escasa...
+
+Ten decenas, centenares de armas,
+
+pero no las uses.
+
+Haz al pueblo respetar la muerte
+
+y no migrar a tierras lejanas.
+
+Aunque haya barcos y carrozas,
+
+no los abordes.
+
+Aunque tengas armaduras y lanzas,
+
+no las despliegues.
+
+Haz que el pueblo nuevamente
+
+anude las cuerdas,
+
+saboree la comida,
+
+embellezca los ropajes,
+
+pacifique la morada,
+
+disfrute las costumbres.
+
+Estados vecinos se divisan de lejos.
+
+Perros y gallos se oyen entre sí.
+
+Los habitantes envejecen y mueren sin jamás interactuar.
+
+第八十一章
+
+信言不美,美言不信。善者不辯,辯者不善。知者不博,博者不知。
+
+聖人不積,既以為人己愈有,既以與人己愈多。天之道,利而不害;
+
+聖人之道,為而不爭。
+
+81
+
+Las palabras confiables no son bellas;
+
+las palabras bellas no son confiables.
+
+Quien es bondadoso no discute;
+
+quien discute no es bondadoso.
+
+Quien sabe no se exhibe;
+
+quien se exhibe no sabe.
+
+El sabio no acumula.
+
+Cuanto más ayuda, más posee;
+
+cuanto más da, más recibe.
+
+El Dao del cielo beneficia sin perjudicar.
+
+El Dao del sabio actúa sin luchar.

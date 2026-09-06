@@ -1,8 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, Loader2 } from "lucide-react";
+import { Send, Loader2, ImagePlus, Volume2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { sendChat } from "@/lib/chatApi";
+import { useAuth } from "@/hooks/useAuth";
+import { analyzeImage, fileToDataUrl } from "@/lib/visionApi";
+import { useSpeaker, detectLang } from "@/lib/speech";
 
 interface Msg {
   role: "user" | "assistant";
@@ -53,6 +56,7 @@ const tabs = [
 ];
 
 const PabellonChat = () => {
+  const { loggedIn } = useAuth();
   const [activeTab, setActiveTab] = useState(0);
   const [messages, setMessages] = useState<Msg[]>([
     { role: "assistant", content: tabs[0].greeting },
@@ -60,6 +64,8 @@ const PabellonChat = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const { speakingId, play } = useSpeaker();
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -111,6 +117,32 @@ No moralices, no diagnostiques y no sustituyas asesoramiento médico, psicológi
     streamChat(newMessages);
   };
 
+  const handleImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file || isLoading) return;
+    setMessages((prev) => [...prev, { role: "user", content: "🖼️ Imagen enviada / 已发送图片" }]);
+    setIsLoading(true);
+    try {
+      const dataUrl = await fileToDataUrl(file);
+      const content = await analyzeImage(dataUrl, { lang: "es" });
+      setMessages((prev) => [...prev, { role: "assistant", content }]);
+    } catch (error) {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content:
+            error instanceof Error
+              ? `No pude analizar la imagen. ${error.message}`
+              : "No pude analizar la imagen.",
+        },
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="flex flex-col h-full">
       {/* Header */}
@@ -119,6 +151,11 @@ No moralices, no diagnostiques y no sustituyas asesoramiento médico, psicológi
           Pabellón de la Gran Simplicidad
         </h3>
         <p className="font-chinese text-xs text-muted-foreground">大道至简阁</p>
+        {!loggedIn && (
+          <p className="mt-2 rounded-lg bg-secondary/70 px-3 py-2 text-[11px] leading-relaxed text-muted-foreground">
+            El consejero real requiere registro e inicio de sesión. / 未登录只能看到演示回复，请先到首页注册并登录。
+          </p>
+        )}
       </div>
 
       {/* Tabs */}
@@ -158,8 +195,20 @@ No moralices, no diagnostiques y no sustituyas asesoramiento médico, psicológi
                 }`}
               >
                 {m.role === "assistant" ? (
-                  <div className="prose prose-sm prose-stone max-w-none [&_p]:mb-1.5 [&_p]:mt-0">
-                    <ReactMarkdown>{m.content}</ReactMarkdown>
+                  <div>
+                    <div className="prose prose-sm prose-stone max-w-none [&_p]:mb-1.5 [&_p]:mt-0">
+                      <ReactMarkdown>{m.content}</ReactMarkdown>
+                    </div>
+                    <button
+                      type="button"
+                      aria-label="Leer en voz alta"
+                      title="朗读 · Leer"
+                      onClick={() => play(`msg-${activeTab}-${i}`, m.content, { lang: detectLang(m.content) })}
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      <Volume2 className={`h-3.5 w-3.5 ${speakingId === `msg-${activeTab}-${i}` ? "text-primary animate-pulse" : ""}`} />
+                      Leer
+                    </button>
                   </div>
                 ) : (
                   m.content
@@ -180,6 +229,22 @@ No moralices, no diagnostiques y no sustituyas asesoramiento médico, psicológi
       {/* Input */}
       <div className="p-4 border-t border-border">
         <div className="flex gap-2">
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleImage}
+            className="hidden"
+          />
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            disabled={isLoading}
+            aria-label="Analizar imagen"
+            title="上传图片解析 · Analizar imagen"
+            className="min-h-11 min-w-11 p-2.5 rounded-lg bg-secondary text-foreground hover:bg-accent transition-colors disabled:opacity-50"
+          >
+            <ImagePlus className="w-4 h-4" />
+          </button>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
