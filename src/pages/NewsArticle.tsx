@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft } from "lucide-react";
-import { newsArticles, renderNewsContent } from "@/data/news";
+import { newsArticles, ossNewsContentUrl, renderNewsContent } from "@/data/news";
 
 const NewsArticle = () => {
   const navigate = useNavigate();
@@ -17,16 +17,38 @@ const NewsArticle = () => {
     const controller = new AbortController();
     setContent("");
     setLoadError(false);
-    fetch(article.contentUrl, { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error("Unable to load article");
-        return response.text();
-      })
-      .then(setContent)
-      .catch((error) => {
-        if (error.name !== "AbortError") setLoadError(true);
-      });
 
+    const urls = [
+      article.contentUrl,
+      `/api/news/${article.id}`,
+      ossNewsContentUrl(article.id),
+    ];
+
+    const load = async () => {
+      let lastError: unknown = null;
+      for (const url of urls) {
+        try {
+          const response = await fetch(url, { signal: controller.signal });
+          if (!response.ok) {
+            lastError = new Error(`HTTP ${response.status}`);
+            continue;
+          }
+          const text = await response.text();
+          if (!text.trim() || text.trim().startsWith("<")) {
+            lastError = new Error("Empty or HTML response");
+            continue;
+          }
+          setContent(text);
+          return;
+        } catch (error) {
+          if ((error as { name?: string }).name === "AbortError") return;
+          lastError = error;
+        }
+      }
+      if (lastError) setLoadError(true);
+    };
+
+    load();
     return () => controller.abort();
   }, [article]);
 

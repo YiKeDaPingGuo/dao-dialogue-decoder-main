@@ -703,6 +703,29 @@ app.post("/api/vision", requireAuth, async (req, res) => {
   }
 });
 
+// 新闻正文代理: 浏览器直连 OSS markdown 常因未配 CORS 失败, 由后端拉取后同源返回
+app.get("/api/news/:articleId", async (req, res) => {
+  const articleId = Number(req.params.articleId);
+  if (!Number.isInteger(articleId) || articleId < 1 || articleId > 32) {
+    return res.status(404).json({ error: "Article not found" });
+  }
+  const url = `https://nkuquetao.oss-cn-shanghai.aliyuncs.com/news/essay/${articleId}/${articleId}.md`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      return res.status(response.status).json({ error: "Unable to load article" });
+    }
+    const text = await response.text();
+    res.setHeader("Content-Type", "text/markdown; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=3600");
+    return res.send(text);
+  } catch (error) {
+    return res.status(502).json({
+      error: error instanceof Error ? error.message : "Unable to load article",
+    });
+  }
+});
+
 app.listen(port, () => {
   console.log(`API running at http://localhost:${port}`);
 });
