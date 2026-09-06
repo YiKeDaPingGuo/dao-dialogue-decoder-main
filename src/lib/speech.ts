@@ -17,15 +17,47 @@ let currentAudio: HTMLAudioElement | null = null;
 let currentToken = 0;
 // 当前播放 Promise 的 resolve, 停止时立即结束, 避免上层状态卡住
 let finishCurrent: (() => void) | null = null;
+let speakTimer: ReturnType<typeof setTimeout> | null = null;
 
 // 会话内缓存: 同一段文本+语速+语言不重复请求百炼 (省钱)
 const audioUrlCache = new Map<string, string>();
 
 const cacheKey = (text: string, lang: SpeakLang, rate: number) => `${lang}|${rate}|${text}`;
 
+/** 预热语音列表 (Chrome/Edge 首次 getVoices() 常为空, 需等 voiceschanged) */
+function warmUpVoices() {
+  if (typeof window === "undefined" || !window.speechSynthesis) return;
+  const synth = window.speechSynthesis;
+  const load = () => synth.getVoices();
+  load();
+  if (typeof synth.addEventListener === "function") {
+    synth.addEventListener("voiceschanged", load, { once: true });
+  } else {
+    synth.onvoiceschanged = load;
+  }
+}
+if (typeof window !== "undefined") warmUpVoices();
+
+function pickVoice(lang: SpeakLang): SpeechSynthesisVoice | null {
+  if (typeof window === "undefined" || !window.speechSynthesis) return null;
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices.length) return null;
+  const wanted = lang === "es" ? ["es-es", "es-mx", "es-us", "es"] : ["zh-cn", "zh-tw", "zh-hk", "zh"];
+  for (const code of wanted) {
+    const exact = voices.find((v) => v.lang?.toLowerCase().replace("_", "-") === code);
+    if (exact) return exact;
+  }
+  const prefix = lang === "es" ? "es" : "zh";
+  return voices.find((v) => v.lang?.toLowerCase().startsWith(prefix)) ?? null;
+}
+
 /** 停止当前所有朗读 (百炼音频 + 浏览器语音) */
 export function stopSpeaking() {
   currentToken += 1;
+  if (speakTimer) {
+    clearTimeout(speakTimer);
+    speakTimer = null;
+  }
   if (currentAudio) {
     try {
       currentAudio.pause();
@@ -48,7 +80,7 @@ export function stopSpeaking() {
 // 目前只使用浏览器内置语音合成; 需要百炼/网关 TTS 时再改为 true
 const USE_BACKEND_TTS = false;
 
-/** 向后端请求百炼 CosyVoice 合成, 返回音频 URL; 失败或未登录返回 null (走浏览器傅底) */
+/** 向后端请求百炼 CosyVoice 合成, 返回音频 URL; 失败或未登录返回 null (走浏览器兜底) */
 async function fetchDashscopeAudio(
   text: string,
   lang: SpeakLang,
@@ -77,23 +109,69 @@ async function fetchDashscopeAudio(
   }
 }
 
-/** 浏览器内置语音合成傅底 */
+/**
+ * 浏览器内置语音合成。
+ * Chrome/Edge 有两个常见坑:
+ * 1) cancel() 后立刻 speak() 会被静默丢掉 → 稍等再 speak
+ * 2) 首次 getVoices() 为空 → 等 voiceschanged / 仍按 lang 朗读
+ */
 function browserSpeak(text: string, lang: SpeakLang, rate: number): Promise<void> {
   return new Promise((resolve) => {
     if (typeof window === "undefined" || !window.speechSynthesis) {
+      console.warn("[speech] 当前浏览器不支持 speechSynthesis");
       resolve();
       return;
     }
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = lang === "es" ? "es-ES" : "zh-CN";
-    utter.rate = rate;
-    const voices = window.speechSynthesis.getVoices();
-    const prefix = utter.lang.slice(0, 2).toLowerCase();
-    const match = voices.find((v) => v.lang?.toLowerCase().startsWith(prefix));
-    if (match) utter.voice = match;
-    utter.onend = () => resolve();
-    utter.onerror = () => resolve();
-    window.speechSynthesis.speak(utter);
+
+    const synth = window.speechSynthesis;
+    // Chrome: cancel 后立刻 speak 常无效, 留一点空隙
+    speakTimer = setTimeout(() => {
+      speakTimer = null;
+      if (!window.speechSynthesis) {
+        resolve();
+        return;
+      }
+
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = lang === "es" ? "es-ES" : "zh-CN";
+      // 部分引擎对过低 rate 不稳定, 夹到安全区间
+      utter.rate = Math.min(1.8, Math.max(0.6, rate));
+      const voice = pickVoice(lang);
+      if (voice) utter.voice = voice;
+
+      let settled = false;
+      const done = () => {
+        if (settled) return;
+        settled = true;
+        resolve();
+      };
+      utter.onend = done;
+      utter.onerror = (e) => {
+        console.warn("[speech] utterance error", e.error);
+        done();
+      };
+
+      try {
+        // Chrome 偶发 paused 状态导致无声: 先 resume
+        if (synth.paused) synth.resume();
+        synth.speak(utter);
+        // 超长文本时 Chrome 可能卡住 paused; 定时 resume 一下
+        const keepAlive = window.setInterval(() => {
+          if (settled) {
+            window.clearInterval(keepAlive);
+            return;
+          }
+          if (synth.speaking && synth.paused) synth.resume();
+          if (!synth.speaking && !synth.pending) {
+            window.clearInterval(keepAlive);
+            done();
+          }
+        }, 250);
+      } catch (err) {
+        console.warn("[speech] speak failed", err);
+        done();
+      }
+    }, 80);
   });
 }
 
@@ -175,7 +253,7 @@ export function useSpeaker() {
         stop();
         return;
       }
-      stopSpeaking();
+      // 不要在这里 stopSpeaking: speak() 内部会停; 避免双重 cancel 加剧 Chrome 静默失败
       setSpeakingId(id);
       try {
         await speak(text, opts);
@@ -192,7 +270,6 @@ export function useSpeaker() {
         stop();
         return;
       }
-      stopSpeaking();
       setSpeakingId(id);
       try {
         await speakSequence(items, rate);
@@ -203,8 +280,11 @@ export function useSpeaker() {
     [speakingId, stop],
   );
 
-  // 组件卸载时停止
-  useEffect(() => () => stopSpeaking(), []);
+  // 组件挂载时预热语音; 卸载时停止
+  useEffect(() => {
+    warmUpVoices();
+    return () => stopSpeaking();
+  }, []);
 
   return { speakingId, play, playSequence, stop };
 }
